@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "reason": "cancelled safely under roof",
+  "domain_id": 91,
+  "robot": "red_standard_robot1",
+  "tunnel": "red_tunnel",
+  "goal": [
+    -1.2,
+    3.475,
+    0.0
+  ],
+  "cancel_test": true,
+  "resume_test": false,
+  "nav2_status": 5,
+  "entered": true,
+  "complete_footprint_exited": false,
+  "final_lift": 0.05500240541736999,
+  "final_guard": [
+    -2.3473728682773722,
+    3.474304106996187,
+    6.142530641854839e-05,
+    7.847592570678427e-06,
+    3.9313047225704734e-11,
+    1.0
+  ],
+  "tf_samples": 66,
+  "phases": [
+    "raising_after_exit:red_tunnel",
+    "planning",
+    "stopping_before_tunnel:red_tunnel",
+    "align_chassis_and_gimbal:red_tunnel",
+    "lowering:red_tunnel",
+    "wait_local_clearance:red_tunnel",
+    "crossing:red_tunnel"
+  ],
+  "violations": [],
+  "elapsed": 8.661636992999775
+}

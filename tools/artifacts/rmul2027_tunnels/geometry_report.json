@@ -1,0 +1,42 @@
+{
+  "map_resolution": 0.05,
+  "map_origin": [
+    -6.5,
+    -4.5,
+    0.0
+  ],
+  "robot_height_with_margin": 0.24300000000000002,
+  "changed_from_original": 302,
+  "tunnels": {
+    "red_tunnel": {
+      "candidate_cells": 1428,
+      "verified_free_cells": 963,
+      "preserved_blocked_cells": 465,
+      "net_clearance": 0.0165,
+      "raster_y_bounds": [
+        3.1,
+        3.85
+      ],
+      "centre_y": 3.475,
+      "footprint_side_margins": [
+        0.015,
+        0.015
+      ]
+    },
+    "blue_tunnel": {
+      "candidate_cells": 1428,
+      "verified_free_cells": 963,
+      "preserved_blocked_cells": 465,
+      "net_clearance": 0.0165,
+      "raster_y_bounds": [
+        -3.85,
+        -3.1
+      ],
+      "centre_y": -3.475,
+      "footprint_side_margins": [
+        0.015,
+        0.015
+      ]
+    }
+  }
+}

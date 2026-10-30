@@ -1,0 +1,7 @@
+<class_libraries>
+	<library path="icd2027sentry_back_up_free_space_behavior">
+	  <class name="icd2027sentry_nav2_behaviors/BackUpFreeSpace" type="icd2027sentry_nav2_behaviors::BackUpFreeSpace" base_class_type="nav2_core::Behavior">
+	    <description>An enhanced back_up action that move toward free space.</description>
+	  </class>
+	</library>
+</class_libraries>

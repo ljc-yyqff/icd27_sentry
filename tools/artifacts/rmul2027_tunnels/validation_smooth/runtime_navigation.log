@@ -1,0 +1,613 @@
+[INFO] [launch]: All log files can be found below /tmp/icd_smooth_nav_logs/2026-10-30-01-25-43-965500-yyqff-MEOW-R16-Pro-179225
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [gazebo_ground_truth_tf.py-1]: process started with pid [179261]
+[INFO] [component_container_isolated-2]: process started with pid [179263]
+[INFO] [pointcloud_to_laserscan_node-3]: process started with pid [179265]
+[INFO] [static_transform_publisher-4]: process started with pid [179267]
+[INFO] [terrainAnalysis-5]: process started with pid [179269]
+[INFO] [terrainAnalysisExt-6]: process started with pid [179271]
+[INFO] [tunnel_guard-7]: process started with pid [179273]
+[INFO] [joy_node-8]: process started with pid [179275]
+[INFO] [icd2027sentry_teleop_twist_joy_node-9]: process started with pid [179277]
+[icd2027sentry_teleop_twist_joy_node-9] [0m[INFO] [1793294745.160014043] [red_standard_robot1.icd2027sentry_teleop_twist_joy_node]: Starting Teleop Twist Joy[0m
+[static_transform_publisher-4] [0m[INFO] [1793294745.186808833] [red_standard_robot1.static_transform_publisher_map2odom]: Spinning until stopped - publishing transform
+[static_transform_publisher-4] translation: ('-4.800000', '3.500000', '0.000000')
+[static_transform_publisher-4] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-4] from 'map' to 'odom'[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.189214009] [red_standard_robot1.nav2_container]: Load Library: /home/yyqff/sentry/icd2027_sentry_nav-main/install/fake_vel_transform/lib/libfake_vel_transform.so[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.197543900] [red_standard_robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<fake_vel_transform::FakeVelTransform>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.197591009] [red_standard_robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<fake_vel_transform::FakeVelTransform>[0m
+[icd2027sentry_teleop_twist_joy_node-9] [0m[INFO] [1793294745.199745476] [red_standard_robot1.icd2027sentry_teleop_twist_joy_node]: Teleop enable button 4.[0m
+[icd2027sentry_teleop_twist_joy_node-9] [0m[INFO] [1793294745.199777546] [red_standard_robot1.icd2027sentry_teleop_twist_joy_node]: Turbo on button 5.[0m
+[icd2027sentry_teleop_twist_joy_node-9] [0m[INFO] [1793294745.199786593] [red_standard_robot1.icd2027sentry_teleop_twist_joy_node]: Teleop enable inverted reverse.[0m
+[icd2027sentry_teleop_twist_joy_node-9] [0m[INFO] [1793294745.199797293] [red_standard_robot1.icd2027sentry_teleop_twist_joy_node]: Linear axis x on 1 at scale 2.500000.[0m
+[icd2027sentry_teleop_twist_joy_node-9] [0m[INFO] [1793294745.199810087] [red_standard_robot1.icd2027sentry_teleop_twist_joy_node]: Turbo for linear axis x is scale 4.000000.[0m
+[icd2027sentry_teleop_twist_joy_node-9] [0m[INFO] [1793294745.199818693] [red_standard_robot1.icd2027sentry_teleop_twist_joy_node]: Linear axis y on 0 at scale 2.500000.[0m
+[icd2027sentry_teleop_twist_joy_node-9] [0m[INFO] [1793294745.199826718] [red_standard_robot1.icd2027sentry_teleop_twist_joy_node]: Turbo for linear axis y is scale 4.000000.[0m
+[icd2027sentry_teleop_twist_joy_node-9] [0m[INFO] [1793294745.199834733] [red_standard_robot1.icd2027sentry_teleop_twist_joy_node]: Linear axis yaw on 6 at scale 3.000000.[0m
+[icd2027sentry_teleop_twist_joy_node-9] [0m[INFO] [1793294745.199847046] [red_standard_robot1.icd2027sentry_teleop_twist_joy_node]: Turbo for linear axis yaw is scale 6.000000.[0m
+[icd2027sentry_teleop_twist_joy_node-9] [0m[INFO] [1793294745.199855602] [red_standard_robot1.icd2027sentry_teleop_twist_joy_node]: Angular axis pitch on 4 at scale -1.000000.[0m
+[icd2027sentry_teleop_twist_joy_node-9] [0m[INFO] [1793294745.199863537] [red_standard_robot1.icd2027sentry_teleop_twist_joy_node]: Turbo for angular axis pitch is scale -1.500000.[0m
+[icd2027sentry_teleop_twist_joy_node-9] [0m[INFO] [1793294745.199871792] [red_standard_robot1.icd2027sentry_teleop_twist_joy_node]: Angular axis shoot on 5 at scale 1.000000.[0m
+[icd2027sentry_teleop_twist_joy_node-9] [0m[INFO] [1793294745.199880008] [red_standard_robot1.icd2027sentry_teleop_twist_joy_node]: Turbo for angular axis shoot is scale 1.000000.[0m
+[icd2027sentry_teleop_twist_joy_node-9] [0m[INFO] [1793294745.199887772] [red_standard_robot1.icd2027sentry_teleop_twist_joy_node]: Angular axis yaw on 3 at scale 2.500000.[0m
+[icd2027sentry_teleop_twist_joy_node-9] [0m[INFO] [1793294745.199895326] [red_standard_robot1.icd2027sentry_teleop_twist_joy_node]: Turbo for angular axis yaw is scale 3.500000.[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.211702077] [red_standard_robot1.fake_vel_transform]: Start FakeVelTransform![0m
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/red_standard_robot1/fake_vel_transform' in container 'red_standard_robot1/nav2_container'
+[component_container_isolated-2] [0m[INFO] [1793294745.223542842] [red_standard_robot1.nav2_container]: Load Library: /opt/ros/humble/lib/libcontroller_server_core.so[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.229514475] [red_standard_robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_controller::ControllerServer>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.229551675] [red_standard_robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_controller::ControllerServer>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.243481946] [red_standard_robot1.controller_server]: 
+[component_container_isolated-2] 	controller_server lifecycle node launched. 
+[component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.254399184] [red_standard_robot1.controller_server]: Creating controller server[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.265654735] [red_standard_robot1.local_costmap.local_costmap]: 
+[component_container_isolated-2] 	local_costmap lifecycle node launched. 
+[component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.266640398] [red_standard_robot1.local_costmap.local_costmap]: Creating Costmap[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.267995932] [red_standard_robot1.nav2_container]: Load Library: /opt/ros/humble/lib/libmap_server_core.so[0m
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/red_standard_robot1/controller_server' in container 'red_standard_robot1/nav2_container'
+[component_container_isolated-2] [0m[INFO] [1793294745.278064023] [red_standard_robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::CostmapFilterInfoServer>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.278103446] [red_standard_robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapSaver>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.278108927] [red_standard_robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapServer>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.278113505] [red_standard_robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapServer>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.288300789] [red_standard_robot1.map_server]: 
+[component_container_isolated-2] 	map_server lifecycle node launched. 
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/red_standard_robot1/map_server' in container 'red_standard_robot1/nav2_container'
+[component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.288351133] [red_standard_robot1.map_server]: Creating[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.288934353] [red_standard_robot1.nav2_container]: Load Library: /opt/ros/humble/lib/libsmoother_server_core.so[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.290286771] [red_standard_robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_smoother::SmootherServer>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.290306809] [red_standard_robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_smoother::SmootherServer>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.306905618] [red_standard_robot1.smoother_server]: 
+[component_container_isolated-2] 	smoother_server lifecycle node launched. 
+[component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.310585257] [red_standard_robot1.smoother_server]: Creating smoother server[0m
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/red_standard_robot1/smoother_server' in container 'red_standard_robot1/nav2_container'
+[component_container_isolated-2] [0m[INFO] [1793294745.311572743] [red_standard_robot1.nav2_container]: Load Library: /opt/ros/humble/lib/libnav2_lifecycle_manager_core.so[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.312564797] [red_standard_robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.312590946] [red_standard_robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>[0m
+[tunnel_guard-7] [33m[WARN] [1793294745.318633642] [red_standard_robot1.tunnel_guard]: Tunnel guard waiting for fresh chassis and command transforms: "map" passed to lookupTransform argument target_frame does not exist. [0m
+[tunnel_guard-7] [33m[WARN] [1793294745.318993184] [red_standard_robot1.tunnel_guard]: Tunnel guard stopping: no fresh full local costmap[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.326474390] [red_standard_robot1.lifecycle_manager_localization]: Creating[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.329276127] [red_standard_robot1.lifecycle_manager_localization]: [34m[1mCreating and initializing lifecycle service clients[0m[0m[0m
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/red_standard_robot1/lifecycle_manager_localization' in container 'red_standard_robot1/nav2_container'
+[component_container_isolated-2] [0m[INFO] [1793294745.329552674] [red_standard_robot1.nav2_container]: Load Library: /opt/ros/humble/lib/libplanner_server_core.so[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.330365854] [red_standard_robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_planner::PlannerServer>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.330387625] [red_standard_robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_planner::PlannerServer>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.331826084] [red_standard_robot1.lifecycle_manager_localization]: [34m[1mStarting managed nodes bringup...[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.332184714] [red_standard_robot1.lifecycle_manager_localization]: [34m[1mConfiguring map_server[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.332354051] [red_standard_robot1.map_server]: Configuring[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.332419834] [map_io]: Loading yaml file: /home/yyqff/sentry/icd2027_sentry_nav-main/install/icd2027sentry_nav_bringup/share/icd2027sentry_nav_bringup/map/simulation/rmul_2027.yaml[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.332684689] [map_io]: resolution: 0.05[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.332694056] [map_io]: origin[0]: -6.5[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.332698304] [map_io]: origin[1]: -4.5[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.332701520] [map_io]: origin[2]: 0[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.332705127] [map_io]: free_thresh: 0.25[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.332708634] [map_io]: occupied_thresh: 0.65[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.332712832] [map_io]: mode: trinary[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.332717651] [map_io]: negate: 0[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.332899010] [map_io]: Loading image_file: /home/yyqff/sentry/icd2027_sentry_nav-main/install/icd2027sentry_nav_bringup/share/icd2027sentry_nav_bringup/map/simulation/rmul_2027.pgm[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.338180703] [map_io]: Read map /home/yyqff/sentry/icd2027_sentry_nav-main/install/icd2027sentry_nav_bringup/share/icd2027sentry_nav_bringup/map/simulation/rmul_2027.pgm: 260 X 180 map @ 0.05 m/cell[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.342212340] [red_standard_robot1.lifecycle_manager_localization]: [34m[1mActivating map_server[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.342322586] [red_standard_robot1.map_server]: Activating[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.342436208] [red_standard_robot1.map_server]: Creating bond (map_server) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.347160319] [red_standard_robot1.planner_server]: 
+[component_container_isolated-2] 	planner_server lifecycle node launched. 
+[component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.350682193] [red_standard_robot1.planner_server]: Creating[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.365921862] [red_standard_robot1.global_costmap.global_costmap]: 
+[component_container_isolated-2] 	global_costmap lifecycle node launched. 
+[component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.367090526] [red_standard_robot1.global_costmap.global_costmap]: Creating Costmap[0m
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/red_standard_robot1/planner_server' in container 'red_standard_robot1/nav2_container'
+[component_container_isolated-2] [0m[INFO] [1793294745.371844323] [red_standard_robot1.nav2_container]: Load Library: /opt/ros/humble/lib/libbehavior_server_core.so[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.375768228] [red_standard_robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<behavior_server::BehaviorServer>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.375792403] [red_standard_robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<behavior_server::BehaviorServer>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.390279976] [red_standard_robot1.behavior_server]: 
+[component_container_isolated-2] 	behavior_server lifecycle node launched. 
+[component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.[0m
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/red_standard_robot1/behavior_server' in container 'red_standard_robot1/nav2_container'
+[component_container_isolated-2] [0m[INFO] [1793294745.396769918] [red_standard_robot1.nav2_container]: Load Library: /opt/ros/humble/lib/libbt_navigator_core.so[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.398786999] [red_standard_robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_bt_navigator::BtNavigator>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.398818468] [red_standard_robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_bt_navigator::BtNavigator>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.414704154] [red_standard_robot1.bt_navigator]: 
+[component_container_isolated-2] 	bt_navigator lifecycle node launched. 
+[component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.414791898] [red_standard_robot1.bt_navigator]: Creating[0m
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/red_standard_robot1/bt_navigator' in container 'red_standard_robot1/nav2_container'
+[component_container_isolated-2] [0m[INFO] [1793294745.417116904] [red_standard_robot1.nav2_container]: Load Library: /opt/ros/humble/lib/libwaypoint_follower_core.so[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.417772049] [red_standard_robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_waypoint_follower::WaypointFollower>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.417795262] [red_standard_robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_waypoint_follower::WaypointFollower>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.431483901] [red_standard_robot1.waypoint_follower]: 
+[component_container_isolated-2] 	waypoint_follower lifecycle node launched. 
+[component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.432255203] [red_standard_robot1.waypoint_follower]: Creating[0m
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/red_standard_robot1/waypoint_follower' in container 'red_standard_robot1/nav2_container'
+[component_container_isolated-2] [0m[INFO] [1793294745.434180893] [red_standard_robot1.nav2_container]: Load Library: /opt/ros/humble/lib/libvelocity_smoother_core.so[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.435501261] [red_standard_robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_velocity_smoother::VelocitySmoother>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.435523273] [red_standard_robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_velocity_smoother::VelocitySmoother>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.447480164] [red_standard_robot1.velocity_smoother]: 
+[component_container_isolated-2] 	velocity_smoother lifecycle node launched. 
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/red_standard_robot1/velocity_smoother' in container 'red_standard_robot1/nav2_container'
+[component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.448517494] [red_standard_robot1.lifecycle_manager_localization]: Server map_server connected with bond.[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.448549393] [red_standard_robot1.lifecycle_manager_localization]: [34m[1mManaged nodes are active[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.448564852] [red_standard_robot1.lifecycle_manager_localization]: [34m[1mCreating bond timer...[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.449484742] [red_standard_robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.449503196] [red_standard_robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.458991253] [red_standard_robot1.lifecycle_manager_navigation]: Creating[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.461160749] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m[0m
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/red_standard_robot1/lifecycle_manager_navigation' in container 'red_standard_robot1/nav2_container'
+[component_container_isolated-2] [0m[INFO] [1793294745.474262250] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.474305321] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.474436325] [red_standard_robot1.controller_server]: Configuring controller interface[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.474743089] [red_standard_robot1.controller_server]: getting goal checker plugins..[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.474775900] [red_standard_robot1.controller_server]: Controller frequency set to 20.0000Hz[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.474818410] [red_standard_robot1.local_costmap.local_costmap]: Configuring[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.480756781] [red_standard_robot1.local_costmap.local_costmap]: Using plugin "static_layer"[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.484137461] [red_standard_robot1.local_costmap.local_costmap]: Subscribing to the map topic (/red_standard_robot1/map) with transient local durability[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.484843450] [red_standard_robot1.local_costmap.local_costmap]: Initialized plugin "static_layer"[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.484863498] [red_standard_robot1.local_costmap.local_costmap]: Using plugin "intensity_voxel_layer"[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.486973813] [red_standard_robot1.local_costmap.local_costmap]: Subscribed to Topics: terrain_map[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.494582707] [red_standard_robot1.local_costmap.local_costmap]: Initialized plugin "intensity_voxel_layer"[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.494611871] [red_standard_robot1.local_costmap.local_costmap]: Using plugin "inflation_layer"[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.495771309] [red_standard_robot1.local_costmap.local_costmap]: Initialized plugin "inflation_layer"[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.506744852] [red_standard_robot1.controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.508450531] [red_standard_robot1.controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.509406307] [red_standard_robot1.controller_server]: Created goal checker : tunnel_goal_checker of type nav2_controller::SimpleGoalChecker[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.510129519] [red_standard_robot1.controller_server]: Controller Server has general_goal_checker tunnel_goal_checker  goal checkers available.[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.511698042] [red_standard_robot1.controller_server]: Created controller : FollowPath of type icd2027sentry_omni_pid_pursuit_controller::OmniPidPursuitController[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.531279466] [red_standard_robot1.controller_server]: Created controller : TunnelFollowPath of type icd2027sentry_omni_pid_pursuit_controller::OmniPidPursuitController[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.539613245] [red_standard_robot1.controller_server]: Created controller : TunnelApproach of type icd2027sentry_omni_pid_pursuit_controller::OmniPidPursuitController[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.548212641] [red_standard_robot1.controller_server]: Controller Server has FollowPath TunnelFollowPath TunnelApproach  controllers available.[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.554658571] [red_standard_robot1.local_costmap.local_costmap]: StaticLayer: Resizing static layer to 260 X 180 at 0.050000 m/pix[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.556022190] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.556115134] [red_standard_robot1.smoother_server]: Configuring smoother server[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.562322167] [red_standard_robot1.smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.563928379] [red_standard_robot1.smoother_server]: Smoother Server has simple_smoother  smoothers available.[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.570943634] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.571052307] [red_standard_robot1.planner_server]: Configuring[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.571099826] [red_standard_robot1.global_costmap.global_costmap]: Configuring[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.578790542] [red_standard_robot1.global_costmap.global_costmap]: Using plugin "static_layer"[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.582570729] [red_standard_robot1.global_costmap.global_costmap]: Subscribing to the map topic (/red_standard_robot1/map) with transient local durability[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.583624288] [red_standard_robot1.global_costmap.global_costmap]: Initialized plugin "static_layer"[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.583652571] [red_standard_robot1.global_costmap.global_costmap]: Using plugin "intensity_voxel_layer"[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.585125705] [red_standard_robot1.global_costmap.global_costmap]: Subscribed to Topics: terrain_map_ext[0m
+[gazebo_ground_truth_tf.py-1] [INFO] [1793294745.597163859] [red_standard_robot1.gazebo_ground_truth_tf]: Gazebo is the authoritative TF, odometry and scan source
+[component_container_isolated-2] [0m[INFO] [1793294745.609509047] [red_standard_robot1.global_costmap.global_costmap]: Initialized plugin "intensity_voxel_layer"[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.609544974] [red_standard_robot1.global_costmap.global_costmap]: Using plugin "inflation_layer"[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.611210477] [red_standard_robot1.global_costmap.global_costmap]: Initialized plugin "inflation_layer"[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.718365610] [red_standard_robot1.global_costmap.global_costmap]: StaticLayer: Resizing costmap to 260 X 180 at 0.050000 m/pix[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.719242630] [red_standard_robot1.planner_server]: Created global planner plugin GridBased of type icd2027sentry_nav2_plugins/FootprintGridPlanner[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.720888196] [red_standard_robot1.planner_server]: GridBased uses continuous full-footprint configuration-space A*[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.720922790] [red_standard_robot1.planner_server]: Planner Server has GridBased  planners available.[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.730309618] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.730470188] [red_standard_robot1.behavior_server]: Configuring[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.736048266] [red_standard_robot1.behavior_server]: Creating behavior plugin spin of type nav2_behaviors/Spin[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.737067671] [red_standard_robot1.behavior_server]: Configuring spin[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.743855671] [red_standard_robot1.behavior_server]: Creating behavior plugin backup of type icd2027sentry_nav2_behaviors/BackUpFreeSpace[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.745027030] [red_standard_robot1.behavior_server]: Configuring backup[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.753675147] [red_standard_robot1.behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors/DriveOnHeading[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.755025621] [red_standard_robot1.behavior_server]: Configuring drive_on_heading[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.761578722] [red_standard_robot1.behavior_server]: Creating behavior plugin assisted_teleop of type nav2_behaviors/AssistedTeleop[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.763257740] [red_standard_robot1.behavior_server]: Configuring assisted_teleop[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.771305284] [red_standard_robot1.behavior_server]: Creating behavior plugin wait of type nav2_behaviors/Wait[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.772069413] [red_standard_robot1.behavior_server]: Configuring wait[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.776745123] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.776847925] [red_standard_robot1.bt_navigator]: Configuring[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.848783900] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.848902302] [red_standard_robot1.waypoint_follower]: Configuring[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.861874973] [red_standard_robot1.waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.862760097] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.862876896] [red_standard_robot1.velocity_smoother]: Configuring velocity smoother[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.867026893] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.867146727] [red_standard_robot1.controller_server]: Activating[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.867175161] [red_standard_robot1.local_costmap.local_costmap]: Activating[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.867187373] [red_standard_robot1.local_costmap.local_costmap]: Checking transform[0m
+[component_container_isolated-2] [0m[INFO] [1793294745.867288152] [red_standard_robot1.local_costmap.local_costmap]: start[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.018215872] [red_standard_robot1.controller_server]: Activating controller: TunnelApproach of type regulated_pure_pursuit_controller::OmniPidPursuitController[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.018322551] [red_standard_robot1.controller_server]: Activating controller: TunnelFollowPath of type regulated_pure_pursuit_controller::OmniPidPursuitController[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.018331799] [red_standard_robot1.controller_server]: Activating controller: FollowPath of type regulated_pure_pursuit_controller::OmniPidPursuitController[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.018366884] [red_standard_robot1.controller_server]: Creating bond (controller_server) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.125310231] [red_standard_robot1.lifecycle_manager_navigation]: Server controller_server connected with bond.[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.125353392] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.125588391] [red_standard_robot1.smoother_server]: Activating[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.125626913] [red_standard_robot1.smoother_server]: Creating bond (smoother_server) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.229192135] [red_standard_robot1.lifecycle_manager_navigation]: Server smoother_server connected with bond.[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.229253079] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.229793199] [red_standard_robot1.planner_server]: Activating[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.229850255] [red_standard_robot1.global_costmap.global_costmap]: Activating[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.229863400] [red_standard_robot1.global_costmap.global_costmap]: Checking transform[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.229981571] [red_standard_robot1.global_costmap.global_costmap]: start[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.482906181] [red_standard_robot1.planner_server]: Creating bond (planner_server) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.586208852] [red_standard_robot1.lifecycle_manager_navigation]: Server planner_server connected with bond.[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.586244338] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.586486070] [red_standard_robot1.behavior_server]: Activating[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.586501549] [red_standard_robot1.behavior_server]: Activating spin[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.586527668] [red_standard_robot1.behavior_server]: Activating backup[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.586540843] [red_standard_robot1.behavior_server]: Activating drive_on_heading[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.586551723] [red_standard_robot1.behavior_server]: Activating assisted_teleop[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.586559738] [red_standard_robot1.behavior_server]: Activating wait[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.586570087] [red_standard_robot1.behavior_server]: Creating bond (behavior_server) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.689799983] [red_standard_robot1.lifecycle_manager_navigation]: Server behavior_server connected with bond.[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.689841210] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.690050761] [red_standard_robot1.bt_navigator]: Activating[0m
+[component_container_isolated-2] [33m[WARN] [1793294746.713106872] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.733328333] [red_standard_robot1.bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.836584017] [red_standard_robot1.lifecycle_manager_navigation]: Server bt_navigator connected with bond.[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.836617509] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mActivating waypoint_follower[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.836828844] [red_standard_robot1.waypoint_follower]: Activating[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.836857598] [red_standard_robot1.waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.941751283] [red_standard_robot1.lifecycle_manager_navigation]: Server waypoint_follower connected with bond.[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.941860187] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mActivating velocity_smoother[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.942322471] [red_standard_robot1.velocity_smoother]: Activating[0m
+[component_container_isolated-2] [0m[INFO] [1793294746.942395768] [red_standard_robot1.velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793294747.047524553] [red_standard_robot1.lifecycle_manager_navigation]: Server velocity_smoother connected with bond.[0m
+[component_container_isolated-2] [0m[INFO] [1793294747.047577812] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294747.047589013] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793294821.187320427] [red_standard_robot1.bt_navigator]: Begin navigating from current location (-4.80, 3.50) to (-1.52, 3.54)[0m
+[component_container_isolated-2] [0m[INFO] [1793294821.187601072] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: planning[0m
+[component_container_isolated-2] [0m[INFO] [1793294821.287693942] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: planning_approach:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294821.317757302] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: approach_wait_point:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294821.327911374] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[component_container_isolated-2] [0m[INFO] [1793294821.728088624] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294822.078089265] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294822.428091049] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294822.678329929] [red_standard_robot1.controller_server]: Reached the goal![0m
+[component_container_isolated-2] [0m[INFO] [1793294822.707584015] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294823.217678061] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294836.307631887] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: lowering:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294836.937673179] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: wait_local_clearance:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294837.237689090] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: centering_before_entry:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294837.247772019] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[tunnel_guard-7] [0m[INFO] [1793294842.799015419] [red_standard_robot1.tunnel_guard]: Tunnel guard reduced speed 0.200 -> 0.191 m/s; full 1 s footprint sweep remains clear (original rejection: lethal obstacle at 0.125, 0.475)[0m
+[component_container_isolated-2] [0m[INFO] [1793294843.448324810] [red_standard_robot1.controller_server]: Reached the goal![0m
+[component_container_isolated-2] [0m[INFO] [1793294843.477703770] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: crossing:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294843.487869844] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[component_container_isolated-2] [0m[INFO] [1793294846.538273845] [red_standard_robot1.controller_server]: Reached the goal![0m
+[component_container_isolated-2] [0m[INFO] [1793294846.567702989] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: raising_after_exit:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294847.227627133] [red_standard_robot1.bt_navigator]: Goal succeeded[0m
+[component_container_isolated-2] [0m[INFO] [1793294847.228561629] [red_standard_robot1.bt_navigator]: Begin navigating from current location (-1.51, 3.47) to (-0.28, -0.08)[0m
+[component_container_isolated-2] [0m[INFO] [1793294847.228699117] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: planning[0m
+[component_container_isolated-2] [0m[INFO] [1793294847.358957047] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: stopping_to_leave_guide:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294847.628871498] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294847.888868649] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: following_axis_aligned_guide:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294847.898935428] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[component_container_isolated-2] [0m[INFO] [1793294849.299395579] [red_standard_robot1.controller_server]: Reached the goal![0m
+[component_container_isolated-2] [0m[INFO] [1793294849.328871951] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: planning[0m
+[component_container_isolated-2] [0m[INFO] [1793294849.458916473] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: normal_follow[0m
+[component_container_isolated-2] [0m[INFO] [1793294849.468901689] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[component_container_isolated-2] [0m[INFO] [1793294849.869029667] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294850.319037810] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294850.719040504] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294851.069032709] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294851.469037367] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294851.819044240] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294852.169035063] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294852.519034833] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294852.919033349] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294853.269033440] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294853.319282424] [red_standard_robot1.controller_server]: Reached the goal![0m
+[component_container_isolated-2] [0m[INFO] [1793294853.358772535] [red_standard_robot1.bt_navigator]: Goal succeeded[0m
+[component_container_isolated-2] [0m[INFO] [1793294853.359917075] [red_standard_robot1.bt_navigator]: Begin navigating from current location (-0.27, 0.05) to (0.42, -3.48)[0m
+[component_container_isolated-2] [0m[INFO] [1793294853.360044523] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: planning[0m
+[component_container_isolated-2] [33m[WARN] [1793294853.580162365] [red_standard_robot1.planner_server]: Planner loop missed its desired rate of 10.0000 Hz. Current loop rate is 6.8027 Hz[0m
+[component_container_isolated-2] [0m[INFO] [1793294853.600230330] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: planning_approach:blue_tunnel[0m
+[component_container_isolated-2] [33m[WARN] [1793294853.821911645] [red_standard_robot1.planner_server]: Planner loop missed its desired rate of 10.0000 Hz. Current loop rate is 7.5758 Hz[0m
+[component_container_isolated-2] [0m[INFO] [1793294853.840189924] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: approach_wait_point:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294853.850519694] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[component_container_isolated-2] [33m[WARN] [1793294854.389061629] [red_standard_robot1.planner_server]: Planner loop missed its desired rate of 10.0000 Hz. Current loop rate is 7.7519 Hz[0m
+[component_container_isolated-2] [0m[INFO] [1793294854.450722907] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [33m[WARN] [1793294854.954072214] [red_standard_robot1.planner_server]: Planner loop missed its desired rate of 10.0000 Hz. Current loop rate is 7.8125 Hz[0m
+[component_container_isolated-2] [0m[INFO] [1793294855.000729294] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294855.450723170] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[tunnel_guard-7] [33m[WARN] [1793294855.759394882] [red_standard_robot1.tunnel_guard]: Tunnel guard stopped policy=0: lethal obstacle at odom (5.325, -7.475), cell=(77,19), predicted t=0.985 s; command=(0.396, -1.756, 3.140)[0m
+[component_container_isolated-2] [0m[INFO] [1793294855.850722537] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294856.200723720] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294856.550726095] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294856.950726284] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294857.251049901] [red_standard_robot1.controller_server]: Reached the goal![0m
+[component_container_isolated-2] [0m[INFO] [1793294857.270286641] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[component_container_isolated-2] [0m[INFO] [1793294857.270580210] [red_standard_robot1.controller_server]: Reached the goal![0m
+[component_container_isolated-2] [0m[INFO] [1793294857.300281994] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294857.860123005] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294864.060216046] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: following_axis_aligned_guide:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294864.070501794] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[tunnel_guard-7] [0m[INFO] [1793294864.301083247] [red_standard_robot1.tunnel_guard]: Tunnel guard reduced speed 0.900 -> 0.889 m/s; full 1 s footprint sweep remains clear (original rejection: lethal obstacle at 4.875, -7.475)[0m
+[component_container_isolated-2] [0m[INFO] [1793294867.970959221] [red_standard_robot1.controller_server]: Reached the goal![0m
+[component_container_isolated-2] [0m[INFO] [1793294868.010445696] [red_standard_robot1.bt_navigator]: Goal succeeded[0m
+[component_container_isolated-2] [0m[INFO] [1793294868.012447107] [red_standard_robot1.bt_navigator]: Begin navigating from current location (0.43, -3.47) to (4.58, -3.48)[0m
+[component_container_isolated-2] [0m[INFO] [1793294868.012671216] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: planning[0m
+[component_container_isolated-2] [0m[INFO] [1793294868.182719951] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294868.502706154] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294868.772674315] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: lowering:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294869.372751673] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: wait_local_clearance:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294869.722887036] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: crossing:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294869.733046919] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[tunnel_guard-7] [0m[INFO] [1793294872.101651202] [red_standard_robot1.tunnel_guard]: Tunnel guard reduced speed 1.800 -> 1.751 m/s; full 1 s footprint sweep remains clear (original rejection: lethal obstacle at 10.075, -7.325)[0m
+[component_container_isolated-2] [0m[INFO] [1793294872.283189224] [red_standard_robot1.controller_server]: Goal was canceled. Stopping the robot.[0m
+[component_container_isolated-2] [0m[INFO] [1793294872.283229960] [red_standard_robot1.controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.[0m
+[component_container_isolated-2] [33m[WARN] [1793294872.283339665] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: paused low for valid lift, gimbal and fresh local clearance[0m
+[component_container_isolated-2] [33m[WARN] [1793294872.283486520] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded![0m
+[component_container_isolated-2] [0m[INFO] [1793294872.539991814] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: valid passage feedback restored, resuming low[0m
+[component_container_isolated-2] [0m[INFO] [1793294872.550416411] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[component_container_isolated-2] [0m[INFO] [1793294874.750728333] [red_standard_robot1.controller_server]: Reached the goal![0m
+[component_container_isolated-2] [0m[INFO] [1793294874.773701839] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: raising_after_exit:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294875.393644523] [red_standard_robot1.bt_navigator]: Goal succeeded[0m
+[component_container_isolated-2] [0m[INFO] [1793294875.394356604] [red_standard_robot1.bt_navigator]: Begin navigating from current location (4.58, -3.47) to (0.42, -3.48)[0m
+[component_container_isolated-2] [0m[INFO] [1793294875.394536260] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: planning[0m
+[component_container_isolated-2] [0m[INFO] [1793294875.544629600] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294875.814626545] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294876.074561781] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: lowering:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294876.704599906] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: wait_local_clearance:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294877.034684507] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: crossing:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294877.044824252] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[component_container_isolated-2] [0m[INFO] [1793294880.645200936] [red_standard_robot1.controller_server]: Reached the goal![0m
+[component_container_isolated-2] [0m[INFO] [1793294880.674671878] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: raising_after_exit:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294881.334567559] [red_standard_robot1.bt_navigator]: Goal succeeded[0m
+[component_container_isolated-2] [0m[INFO] [1793294881.335284489] [red_standard_robot1.bt_navigator]: Begin navigating from current location (0.39, -3.47) to (-1.20, 3.48)[0m
+[component_container_isolated-2] [0m[INFO] [1793294881.335491596] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: planning[0m
+[component_container_isolated-2] [33m[WARN] [1793294882.174134943] [red_standard_robot1.planner_server]: Planner loop missed its desired rate of 10.0000 Hz. Current loop rate is 1.6502 Hz[0m
+[component_container_isolated-2] [0m[INFO] [1793294882.185542929] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: planning_approach:red_tunnel[0m
+[component_container_isolated-2] [33m[WARN] [1793294883.063790090] [red_standard_robot1.planner_server]: Planner loop missed its desired rate of 10.0000 Hz. Current loop rate is 1.4925 Hz[0m
+[component_container_isolated-2] [0m[INFO] [1793294883.075640563] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: approach_wait_point:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294883.085642690] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[component_container_isolated-2] [33m[WARN] [1793294884.254752221] [red_standard_robot1.planner_server]: Planner loop missed its desired rate of 10.0000 Hz. Current loop rate is 1.6835 Hz[0m
+[component_container_isolated-2] [0m[INFO] [1793294884.285801334] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [33m[WARN] [1793294884.957832069] [red_standard_robot1.planner_server]: Planner loop missed its desired rate of 10.0000 Hz. Current loop rate is 3.7736 Hz[0m
+[component_container_isolated-2] [0m[INFO] [1793294884.985794070] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [33m[WARN] [1793294885.557625817] [red_standard_robot1.planner_server]: Planner loop missed its desired rate of 10.0000 Hz. Current loop rate is 5.6180 Hz[0m
+[component_container_isolated-2] [0m[INFO] [1793294885.585799073] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [33m[WARN] [1793294886.130403922] [red_standard_robot1.planner_server]: Planner loop missed its desired rate of 10.0000 Hz. Current loop rate is 6.5789 Hz[0m
+[component_container_isolated-2] [0m[INFO] [1793294886.185800008] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294886.635795427] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294887.085798510] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294887.435799392] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[tunnel_guard-7] [33m[WARN] [1793294887.479174316] [red_standard_robot1.tunnel_guard]: Tunnel guard stopped policy=0: lethal obstacle at odom (4.475, 0.475), cell=(68,116), predicted t=1.000 s; command=(-0.217, 1.787, 3.140)[0m
+[component_container_isolated-2] [0m[INFO] [1793294887.785810143] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294888.185794673] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294888.535798079] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294888.885799582] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793294888.936098810] [red_standard_robot1.controller_server]: Reached the goal![0m
+[component_container_isolated-2] [0m[INFO] [1793294888.965509861] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294889.495505660] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294891.315519874] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: following_axis_aligned_guide:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294891.325809559] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[tunnel_guard-7] [0m[INFO] [1793294892.139897092] [red_standard_robot1.tunnel_guard]: Tunnel guard reduced speed 0.736 -> 0.721 m/s; full 1 s footprint sweep remains clear (original rejection: lethal obstacle at 4.025, 0.475)[0m
+[tunnel_guard-7] [0m[INFO] [1793294896.239531835] [red_standard_robot1.tunnel_guard]: Tunnel guard reduced speed 0.427 -> 0.414 m/s; full 1 s footprint sweep remains clear (original rejection: lethal obstacle at 3.075, 0.375)[0m
+[component_container_isolated-2] [0m[INFO] [1793294897.776287193] [red_standard_robot1.controller_server]: Reached the goal![0m
+[component_container_isolated-2] [0m[INFO] [1793294897.815468928] [red_standard_robot1.bt_navigator]: Goal succeeded[0m
+[component_container_isolated-2] [0m[INFO] [1793294897.816027973] [red_standard_robot1.bt_navigator]: Begin navigating from current location (-1.19, 3.47) to (-4.58, 3.48)[0m
+[component_container_isolated-2] [0m[INFO] [1793294897.816119364] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: planning[0m
+[component_container_isolated-2] [0m[INFO] [1793294897.886307442] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294898.236191535] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294898.506253181] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: lowering:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294899.116319512] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: wait_local_clearance:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294899.436352853] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: crossing:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294899.446685870] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[tunnel_guard-7] [0m[INFO] [1793294901.162242574] [red_standard_robot1.tunnel_guard]: Tunnel guard reduced speed 1.800 -> 1.765 m/s; full 1 s footprint sweep remains clear (original rejection: lethal obstacle at -0.425, 0.325)[0m
+[component_container_isolated-2] [0m[INFO] [1793294901.396856925] [red_standard_robot1.controller_server]: Goal was canceled. Stopping the robot.[0m
+[component_container_isolated-2] [0m[INFO] [1793294901.396892342] [red_standard_robot1.controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.[0m
+[component_container_isolated-2] [33m[WARN] [1793294901.396966059] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: paused low for valid lift, gimbal and fresh local clearance[0m
+[component_container_isolated-2] [33m[WARN] [1793294901.397059043] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded![0m
+[component_container_isolated-2] [0m[INFO] [1793294901.725628362] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: valid passage feedback restored, resuming low[0m
+[component_container_isolated-2] [0m[INFO] [1793294901.736065693] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[component_container_isolated-2] [0m[INFO] [1793294904.186471183] [red_standard_robot1.controller_server]: Reached the goal![0m
+[component_container_isolated-2] [0m[INFO] [1793294904.207298016] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: raising_after_exit:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793294904.867205068] [red_standard_robot1.bt_navigator]: Goal succeeded[0m
+[component_container_isolated-2] [0m[INFO] [1793295176.620110837] [red_standard_robot1.bt_navigator]: Begin navigating from current location (-4.57, 3.47) to (-1.20, 3.48)[0m
+[component_container_isolated-2] [0m[INFO] [1793295176.620326090] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: planning[0m
+[component_container_isolated-2] [0m[INFO] [1793295176.760510857] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793295177.020401189] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793295177.290426687] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: lowering:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793295177.900464014] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: wait_local_clearance:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793295178.220496334] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: crossing:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793295178.230685120] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[component_container_isolated-2] [0m[INFO] [1793295181.231079965] [red_standard_robot1.controller_server]: Reached the goal![0m
+[component_container_isolated-2] [0m[INFO] [1793295181.260399354] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: raising_after_exit:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793295181.900330143] [red_standard_robot1.bt_navigator]: Goal succeeded[0m
+[component_container_isolated-2] [0m[INFO] [1793295181.900938259] [red_standard_robot1.bt_navigator]: Begin navigating from current location (-1.17, 3.47) to (0.42, -3.48)[0m
+[component_container_isolated-2] [0m[INFO] [1793295181.901041112] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: planning[0m
+[component_container_isolated-2] [33m[WARN] [1793295182.570282773] [red_standard_robot1.planner_server]: Planner loop missed its desired rate of 10.0000 Hz. Current loop rate is 2.0790 Hz[0m
+[component_container_isolated-2] [0m[INFO] [1793295182.581262469] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: stopping_to_leave_guide:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793295182.851106247] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793295183.111155786] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: following_axis_aligned_guide:red_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793295183.121369440] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[component_container_isolated-2] [0m[INFO] [1793295184.321805361] [red_standard_robot1.controller_server]: Reached the goal![0m
+[component_container_isolated-2] [0m[INFO] [1793295184.351161258] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: planning[0m
+[component_container_isolated-2] [33m[WARN] [1793295184.960263036] [red_standard_robot1.planner_server]: Planner loop missed its desired rate of 10.0000 Hz. Current loop rate is 2.3697 Hz[0m
+[component_container_isolated-2] [0m[INFO] [1793295184.971209720] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: planning_approach:blue_tunnel[0m
+[component_container_isolated-2] [33m[WARN] [1793295185.905240010] [red_standard_robot1.planner_server]: Planner loop missed its desired rate of 10.0000 Hz. Current loop rate is 1.4706 Hz[0m
+[component_container_isolated-2] [0m[INFO] [1793295185.921313427] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: approach_wait_point:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793295185.931500200] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[component_container_isolated-2] [33m[WARN] [1793295187.133072656] [red_standard_robot1.planner_server]: Planner loop missed its desired rate of 10.0000 Hz. Current loop rate is 1.6077 Hz[0m
+[component_container_isolated-2] [0m[INFO] [1793295187.181662258] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [33m[WARN] [1793295187.878280838] [red_standard_robot1.planner_server]: Planner loop missed its desired rate of 10.0000 Hz. Current loop rate is 3.5088 Hz[0m
+[component_container_isolated-2] [0m[INFO] [1793295187.931709275] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [33m[WARN] [1793295188.489592917] [red_standard_robot1.planner_server]: Planner loop missed its desired rate of 10.0000 Hz. Current loop rate is 5.3763 Hz[0m
+[component_container_isolated-2] [0m[INFO] [1793295188.531670516] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [33m[WARN] [1793295189.042522569] [red_standard_robot1.planner_server]: Planner loop missed its desired rate of 10.0000 Hz. Current loop rate is 6.8493 Hz[0m
+[component_container_isolated-2] [0m[INFO] [1793295189.081710185] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793295189.581714880] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793295189.981680344] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793295190.381720999] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[tunnel_guard-7] [33m[WARN] [1793295190.439592062] [red_standard_robot1.tunnel_guard]: Tunnel guard stopped policy=0: lethal obstacle at odom (5.125, -7.475), cell=(71,16), predicted t=0.985 s; command=(0.185, -1.790, 3.140)[0m
+[component_container_isolated-2] [0m[INFO] [1793295190.731711041] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793295191.081714608] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793295191.431665366] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793295191.781661759] [red_standard_robot1.controller_server]: Passing new path to controller.[0m
+[component_container_isolated-2] [0m[INFO] [1793295191.781993870] [red_standard_robot1.controller_server]: Reached the goal![0m
+[component_container_isolated-2] [0m[INFO] [1793295191.821104382] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793295192.311137517] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793295193.851144753] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: following_axis_aligned_guide:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793295193.861311098] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[tunnel_guard-7] [0m[INFO] [1793295194.080858684] [red_standard_robot1.tunnel_guard]: Tunnel guard reduced speed 0.900 -> 0.893 m/s; full 1 s footprint sweep remains clear (original rejection: lethal obstacle at 5.225, -7.475)[0m
+[component_container_isolated-2] [0m[INFO] [1793295197.461658648] [red_standard_robot1.controller_server]: Reached the goal![0m
+[component_container_isolated-2] [0m[INFO] [1793295197.501255850] [red_standard_robot1.bt_navigator]: Goal succeeded[0m
+[component_container_isolated-2] [0m[INFO] [1793295197.502107502] [red_standard_robot1.bt_navigator]: Begin navigating from current location (0.43, -3.47) to (4.58, -3.48)[0m
+[component_container_isolated-2] [0m[INFO] [1793295197.502242755] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: planning[0m
+[component_container_isolated-2] [0m[INFO] [1793295197.662412191] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793295197.942304894] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793295198.202325790] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: lowering:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793295198.802315534] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: wait_local_clearance:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793295199.122343536] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: crossing:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793295199.132533775] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[tunnel_guard-7] [0m[INFO] [1793295201.441542051] [red_standard_robot1.tunnel_guard]: Tunnel guard reduced speed 1.800 -> 1.765 m/s; full 1 s footprint sweep remains clear (original rejection: lethal obstacle at 10.075, -7.325)[0m
+[component_container_isolated-2] [0m[INFO] [1793295201.582637631] [red_standard_robot1.controller_server]: Goal was canceled. Stopping the robot.[0m
+[component_container_isolated-2] [0m[INFO] [1793295201.582687044] [red_standard_robot1.controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.[0m
+[component_container_isolated-2] [33m[WARN] [1793295201.582786910] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: paused low for valid lift, gimbal and fresh local clearance[0m
+[component_container_isolated-2] [33m[WARN] [1793295201.582898339] [BehaviorTreeEngine]: Behavior Tree tick rate 100.00 was exceeded![0m
+[component_container_isolated-2] [0m[INFO] [1793295201.932358049] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: valid passage feedback restored, resuming low[0m
+[component_container_isolated-2] [0m[INFO] [1793295201.942842679] [red_standard_robot1.controller_server]: Received a goal, begin computing control effort.[0m
+[component_container_isolated-2] [0m[INFO] [1793295204.243252340] [red_standard_robot1.controller_server]: Reached the goal![0m
+[component_container_isolated-2] [0m[INFO] [1793295204.273305020] [red_standard_robot1.tunnel_bt_io]: Tunnel BT: raising_after_exit:blue_tunnel[0m
+[component_container_isolated-2] [0m[INFO] [1793295204.943053670] [red_standard_robot1.bt_navigator]: Goal succeeded[0m
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [icd2027sentry_teleop_twist_joy_node-9]: sending signal 'SIGINT' to process[icd2027sentry_teleop_twist_joy_node-9]
+[ERROR] [terrainAnalysis-5]: process has died [pid 179269, exit code -6, cmd '/home/yyqff/sentry/icd2027_sentry_nav-main/install/terrain_analysis/lib/terrain_analysis/terrainAnalysis --ros-args --log-level info --ros-args -r __node:=terrain_analysis -r __ns:=/red_standard_robot1 --params-file /tmp/launch_params_eakk1_hi -r /tf:=tf -r /tf_static:=tf_static'].
+[ERROR] [terrainAnalysisExt-6]: process has died [pid 179271, exit code -6, cmd '/home/yyqff/sentry/icd2027_sentry_nav-main/install/terrain_analysis_ext/lib/terrain_analysis_ext/terrainAnalysisExt --ros-args --log-level info --ros-args -r __node:=terrain_analysis_ext -r __ns:=/red_standard_robot1 --params-file /tmp/launch_params_eakk1_hi -r /tf:=tf -r /tf_static:=tf_static'].
+[INFO] [joy_node-8]: sending signal 'SIGINT' to process[joy_node-8]
+[INFO] [tunnel_guard-7]: sending signal 'SIGINT' to process[tunnel_guard-7]
+[INFO] [static_transform_publisher-4]: sending signal 'SIGINT' to process[static_transform_publisher-4]
+[INFO] [pointcloud_to_laserscan_node-3]: sending signal 'SIGINT' to process[pointcloud_to_laserscan_node-3]
+[INFO] [component_container_isolated-2]: sending signal 'SIGINT' to process[component_container_isolated-2]
+[INFO] [gazebo_ground_truth_tf.py-1]: sending signal 'SIGINT' to process[gazebo_ground_truth_tf.py-1]
+[ERROR] [joy_node-8]: process has died [pid 179275, exit code -2, cmd '/opt/ros/humble/lib/joy/joy_node --ros-args -r __node:=joy_node -r __ns:=/red_standard_robot1 --params-file /tmp/launch_params_88yvu6tz -r /tf:=tf -r /tf_static:=tf_static'].
+[component_container_isolated-2] [0m[INFO] [1793295259.171718118] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[component_container_isolated-2] [0m[INFO] [1793295259.171834656] [red_standard_robot1.velocity_smoother]: Running Nav2 LifecycleNode rcl preshutdown (velocity_smoother)[0m
+[component_container_isolated-2] [0m[INFO] [1793295259.171975439] [red_standard_robot1.velocity_smoother]: Deactivating[0m
+[component_container_isolated-2] [0m[INFO] [1793295259.172017588] [red_standard_robot1.velocity_smoother]: Destroying bond (velocity_smoother) to lifecycle manager.[0m
+[static_transform_publisher-4] [0m[INFO] [1793295259.171716104] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[ERROR] [static_transform_publisher-4]: process has died [pid 179267, exit code -2, cmd '/opt/ros/humble/lib/tf2_ros/static_transform_publisher --x -4.8 --y 3.5 --z 0.0 --roll 0.0 --pitch 0.0 --yaw 0.0 --frame-id map --child-frame-id odom --ros-args -r __node:=static_transform_publisher_map2odom -r __ns:=/red_standard_robot1 -r /tf:=tf -r /tf_static:=tf_static'].
+[tunnel_guard-7] [0m[INFO] [1793295259.171723378] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[terrainAnalysis-5] [0m[INFO] [1793295259.171713619] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[terrainAnalysis-5] terminate called after throwing an instance of 'rclcpp::exceptions::RCLError'
+[terrainAnalysis-5]   what():  failed to create guard condition: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at ./src/rcl/guard_condition.c:67
+[pointcloud_to_laserscan_node-3] [0m[INFO] [1793295259.171709301] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[terrainAnalysisExt-6] [0m[INFO] [1793295259.171786866] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[terrainAnalysisExt-6] terminate called after throwing an instance of 'rclcpp::exceptions::RCLError'
+[terrainAnalysisExt-6]   what():  failed to create guard condition: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at ./src/rcl/guard_condition.c:67
+[icd2027sentry_teleop_twist_joy_node-9] [0m[INFO] [1793295259.172156828] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[joy_node-8] [0m[INFO] [1793295259.172659668] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[component_container_isolated-2] [0m[INFO] [1793295259.183379497] [red_standard_robot1.velocity_smoother]: Cleaning up[0m
+[component_container_isolated-2] [0m[INFO] [1793295259.183437636] [red_standard_robot1.velocity_smoother]: Destroying bond (velocity_smoother) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793295259.183447234] [red_standard_robot1.waypoint_follower]: Running Nav2 LifecycleNode rcl preshutdown (waypoint_follower)[0m
+[component_container_isolated-2] [0m[INFO] [1793295259.183465478] [red_standard_robot1.waypoint_follower]: Deactivating[0m
+[component_container_isolated-2] [0m[INFO] [1793295259.183475637] [red_standard_robot1.waypoint_follower]: Destroying bond (waypoint_follower) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793295259.193803414] [red_standard_robot1.waypoint_follower]: Cleaning up[0m
+[component_container_isolated-2] [0m[INFO] [1793295259.247684818] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mHave not received a heartbeat from waypoint_follower.[0m[0m[0m
+[component_container_isolated-2] [31m[ERROR] [1793295259.247754979] [red_standard_robot1.lifecycle_manager_navigation]: CRITICAL FAILURE: SERVER waypoint_follower IS DOWN after not receiving a heartbeat for 4000 ms. Shutting down related nodes.[0m
+[component_container_isolated-2] [0m[INFO] [1793295259.247799061] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mTerminating bond timer...[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793295259.247806465] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mResetting managed nodes...[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793295259.247812567] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mDeactivating velocity_smoother[0m[0m[0m
+[ERROR] [pointcloud_to_laserscan_node-3]: process has died [pid 179265, exit code -2, cmd '/home/yyqff/sentry/icd2027_sentry_nav-main/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node --ros-args --log-level info --ros-args -r __node:=pointcloud_to_laserscan -r __ns:=/red_standard_robot1 --params-file /tmp/launch_params_wzhq0bjy --params-file /tmp/launch_params_ij8f3irz -r /tf:=tf -r /tf_static:=tf_static -r cloud_in:=terrain_map_ext -r scan:=obstacle_scan'].
+[icd2027sentry_teleop_twist_joy_node-9] [0m[INFO] [1793295260.191421713] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[tunnel_guard-7] [0m[INFO] [1793295260.193450336] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[ERROR] [gazebo_ground_truth_tf.py-1]: process has died [pid 179261, exit code -2, cmd '/home/yyqff/sentry/icd2027_sentry_nav-main/install/icd2027sentry_nav_bringup/lib/icd2027sentry_nav_bringup/gazebo_ground_truth_tf.py --ros-args -r __node:=gazebo_ground_truth_tf -r __ns:=/red_standard_robot1 --params-file /tmp/launch_params_7i9xcq_t --params-file /tmp/launch_params_i1uu0iq8 --params-file /tmp/launch_params_gqxg4du7 --params-file /tmp/launch_params_j_d6d2ty --params-file /tmp/launch_params_pz724_su --params-file /tmp/launch_params_jpvyj6e1 --params-file /tmp/launch_params_9nng0mkv -r /tf:=tf -r /tf_static:=tf_static'].
+[component_container_isolated-2] [33m[WARN] [1793295260.212330179] [rcl_lifecycle]: No transition matching 4 found for current state unconfigured[0m
+[component_container_isolated-2] [33m[WARN] [1793295260.212357921] [rcl_lifecycle]: No transition matching 4 found for current state unconfigured[0m
+[component_container_isolated-2] [31m[ERROR] [1793295260.212369913] [red_standard_robot1.velocity_smoother]: Unable to start transition 4 from current state unconfigured: Transition is not registered., at ./src/rcl_lifecycle.c:355[0m
+[component_container_isolated-2] [31m[ERROR] [1793295260.212595966] [red_standard_robot1.lifecycle_manager_navigation]: Failed to change state for node: velocity_smoother[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.212622225] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mDeactivating waypoint_follower[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.215060924] [red_standard_robot1.waypoint_follower]: Destroying bond (waypoint_follower) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.215082104] [red_standard_robot1.bt_navigator]: Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.215100919] [red_standard_robot1.bt_navigator]: Deactivating[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.215124062] [red_standard_robot1.bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.[0m
+[component_container_isolated-2] [33m[WARN] [1793295260.217005098] [rcl_lifecycle]: No transition matching 4 found for current state unconfigured[0m
+[component_container_isolated-2] [33m[WARN] [1793295260.217015628] [rcl_lifecycle]: No transition matching 4 found for current state unconfigured[0m
+[component_container_isolated-2] [31m[ERROR] [1793295260.217020197] [red_standard_robot1.waypoint_follower]: Unable to start transition 4 from current state unconfigured: Transition is not registered., at ./src/rcl_lifecycle.c:355[0m
+[component_container_isolated-2] [31m[ERROR] [1793295260.217220321] [red_standard_robot1.lifecycle_manager_navigation]: Failed to change state for node: waypoint_follower[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.217242161] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mDeactivating bt_navigator[0m[0m[0m
+[component_container_isolated-2] [33m[WARN] [1793295260.217305330] [rcl_lifecycle]: No transition matching 4 found for current state deactivating[0m
+[component_container_isolated-2] [33m[WARN] [1793295260.217311511] [rcl_lifecycle]: No transition matching 4 found for current state deactivating[0m
+[component_container_isolated-2] [31m[ERROR] [1793295260.217315188] [red_standard_robot1.bt_navigator]: Unable to start transition 4 from current state deactivating: Transition is not registered., at ./src/rcl_lifecycle.c:355[0m
+[component_container_isolated-2] [31m[ERROR] [1793295260.217422589] [red_standard_robot1.lifecycle_manager_navigation]: Failed to change state for node: bt_navigator[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.217437757] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mDeactivating behavior_server[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.217524379] [red_standard_robot1.behavior_server]: Deactivating[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.217567470] [red_standard_robot1.behavior_server]: Destroying bond (behavior_server) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.225399260] [red_standard_robot1.bt_navigator]: Cleaning up[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.276080262] [red_standard_robot1.bt_navigator]: Completed Cleaning up[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.276129684] [red_standard_robot1.bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.276140204] [red_standard_robot1.behavior_server]: Running Nav2 LifecycleNode rcl preshutdown (behavior_server)[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.276149802] [red_standard_robot1.behavior_server]: Destroying bond (behavior_server) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.276154310] [red_standard_robot1.planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.276170440] [red_standard_robot1.planner_server]: Deactivating[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.276201909] [red_standard_robot1.global_costmap.global_costmap]: Deactivating[0m
+[INFO] [tunnel_guard-7]: process has finished cleanly [pid 179273]
+[INFO] [icd2027sentry_teleop_twist_joy_node-9]: process has finished cleanly [pid 179277]
+[component_container_isolated-2] [0m[INFO] [1793295260.329559174] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mDeactivating planner_server[0m[0m[0m
+[component_container_isolated-2] [33m[WARN] [1793295260.329844647] [rcl_lifecycle]: No transition matching 4 found for current state deactivating[0m
+[component_container_isolated-2] [33m[WARN] [1793295260.329854877] [rcl_lifecycle]: No transition matching 4 found for current state deactivating[0m
+[component_container_isolated-2] [31m[ERROR] [1793295260.329860277] [red_standard_robot1.planner_server]: Unable to start transition 4 from current state deactivating: Transition is not registered., at ./src/rcl_lifecycle.c:355[0m
+[component_container_isolated-2] [31m[ERROR] [1793295260.330068306] [red_standard_robot1.lifecycle_manager_navigation]: Failed to change state for node: planner_server[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.330083805] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mDeactivating smoother_server[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.330138036] [red_standard_robot1.smoother_server]: Deactivating[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.330174815] [red_standard_robot1.smoother_server]: Destroying bond (smoother_server) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.334513876] [red_standard_robot1.planner_server]: Destroying bond (planner_server) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.344780899] [red_standard_robot1.planner_server]: Cleaning up[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.361206254] [red_standard_robot1.global_costmap.global_costmap]: Cleaning up[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.373154450] [red_standard_robot1.planner_server]: Destroying bond (planner_server) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.373216646] [red_standard_robot1.lifecycle_manager_navigation]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_navigation)[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.442518507] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mDeactivating controller_server[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.442834057] [red_standard_robot1.controller_server]: Deactivating[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.442869012] [red_standard_robot1.controller_server]: Deactivating controller: TunnelApproach of type regulated_pure_pursuit_controller::OmniPidPursuitController[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.442886855] [red_standard_robot1.controller_server]: Deactivating controller: TunnelFollowPath of type regulated_pure_pursuit_controller::OmniPidPursuitController[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.442896574] [red_standard_robot1.controller_server]: Deactivating controller: FollowPath of type regulated_pure_pursuit_controller::OmniPidPursuitController[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.442928664] [red_standard_robot1.local_costmap.local_costmap]: Deactivating[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.479570801] [red_standard_robot1.controller_server]: Destroying bond (controller_server) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.592111682] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mCleaning up velocity_smoother[0m[0m[0m
+[component_container_isolated-2] [33m[WARN] [1793295260.592411483] [rcl_lifecycle]: No transition matching 2 found for current state unconfigured[0m
+[component_container_isolated-2] [33m[WARN] [1793295260.592424978] [rcl_lifecycle]: No transition matching 2 found for current state unconfigured[0m
+[component_container_isolated-2] [31m[ERROR] [1793295260.592432622] [red_standard_robot1.velocity_smoother]: Unable to start transition 2 from current state unconfigured: Transition is not registered., at ./src/rcl_lifecycle.c:355[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.592623459] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mCleaning up waypoint_follower[0m[0m[0m
+[component_container_isolated-2] [33m[WARN] [1793295260.592723165] [rcl_lifecycle]: No transition matching 2 found for current state unconfigured[0m
+[component_container_isolated-2] [33m[WARN] [1793295260.592734647] [rcl_lifecycle]: No transition matching 2 found for current state unconfigured[0m
+[component_container_isolated-2] [31m[ERROR] [1793295260.592741309] [red_standard_robot1.waypoint_follower]: Unable to start transition 2 from current state unconfigured: Transition is not registered., at ./src/rcl_lifecycle.c:355[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.592836036] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mCleaning up bt_navigator[0m[0m[0m
+[component_container_isolated-2] [33m[WARN] [1793295260.606173489] [rcl_lifecycle]: No transition matching 2 found for current state unconfigured[0m
+[component_container_isolated-2] [33m[WARN] [1793295260.606195290] [rcl_lifecycle]: No transition matching 2 found for current state unconfigured[0m
+[component_container_isolated-2] [31m[ERROR] [1793295260.606201101] [red_standard_robot1.bt_navigator]: Unable to start transition 2 from current state unconfigured: Transition is not registered., at ./src/rcl_lifecycle.c:355[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.606401385] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mCleaning up behavior_server[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.606518955] [red_standard_robot1.behavior_server]: Cleaning up[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.632507948] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mCleaning up planner_server[0m[0m[0m
+[component_container_isolated-2] [33m[WARN] [1793295260.633224988] [rcl_lifecycle]: No transition matching 2 found for current state unconfigured[0m
+[component_container_isolated-2] [33m[WARN] [1793295260.633234636] [rcl_lifecycle]: No transition matching 2 found for current state unconfigured[0m
+[component_container_isolated-2] [31m[ERROR] [1793295260.633239075] [red_standard_robot1.planner_server]: Unable to start transition 2 from current state unconfigured: Transition is not registered., at ./src/rcl_lifecycle.c:355[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.633319094] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mCleaning up smoother_server[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.633367955] [red_standard_robot1.smoother_server]: Cleaning up[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.640300004] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mCleaning up controller_server[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.640406744] [red_standard_robot1.controller_server]: Cleaning up[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.640425439] [red_standard_robot1.controller_server]: Cleaning up controller: TunnelApproach of type icd2027sentry_omni_pid_pursuit_controller::OmniPidPursuitController[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.641760675] [red_standard_robot1.controller_server]: Cleaning up controller: TunnelFollowPath of type icd2027sentry_omni_pid_pursuit_controller::OmniPidPursuitController[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.642990995] [red_standard_robot1.controller_server]: Cleaning up controller: FollowPath of type icd2027sentry_omni_pid_pursuit_controller::OmniPidPursuitController[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.644259646] [red_standard_robot1.local_costmap.local_costmap]: Cleaning up[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.660576288] [red_standard_robot1.lifecycle_manager_navigation]: [34m[1mManaged nodes have been reset[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.708431207] [red_standard_robot1.lifecycle_manager_localization]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_localization)[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.708471262] [red_standard_robot1.lifecycle_manager_localization]: [34m[1mTerminating bond timer...[0m[0m[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.719760535] [red_standard_robot1.smoother_server]: Running Nav2 LifecycleNode rcl preshutdown (smoother_server)[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.719810399] [red_standard_robot1.smoother_server]: Destroying bond (smoother_server) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.719817592] [red_standard_robot1.map_server]: Running Nav2 LifecycleNode rcl preshutdown (map_server)[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.719869770] [red_standard_robot1.map_server]: Deactivating[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.719910596] [red_standard_robot1.map_server]: Destroying bond (map_server) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.730024082] [red_standard_robot1.map_server]: Cleaning up[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.730062995] [red_standard_robot1.map_server]: Destroying bond (map_server) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.730072332] [red_standard_robot1.controller_server]: Running Nav2 LifecycleNode rcl preshutdown (controller_server)[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.730080577] [red_standard_robot1.controller_server]: Destroying bond (controller_server) to lifecycle manager.[0m
+[component_container_isolated-2] [0m[INFO] [1793295260.739114004] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[ERROR] [component_container_isolated-2]: process[component_container_isolated-2] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'
+[INFO] [component_container_isolated-2]: sending signal 'SIGTERM' to process[component_container_isolated-2]
+[component_container_isolated-2] [0m[INFO] [1793295265.194102917] [rclcpp]: signal_handler(SIGINT/SIGTERM)[0m
+[ERROR] [component_container_isolated-2]: process[component_container_isolated-2] failed to terminate '10.0' seconds after receiving 'SIGTERM', escalating to 'SIGKILL'
+[INFO] [component_container_isolated-2]: sending signal 'SIGKILL' to process[component_container_isolated-2]
+[ERROR] [component_container_isolated-2]: process has died [pid 179263, exit code -9, cmd '/opt/ros/humble/lib/rclcpp_components/component_container_isolated --ros-args --log-level info --ros-args -r __node:=nav2_container -r __ns:=/red_standard_robot1 --params-file /tmp/launch_params__8bx_jvj --params-file /tmp/launch_params_qcotaj6f -r /tf:=tf -r /tf_static:=tf_static'].

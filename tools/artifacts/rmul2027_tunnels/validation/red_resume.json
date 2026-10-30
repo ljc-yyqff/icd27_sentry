@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "reason": "Nav2 succeeded; full footprint exited and chassis restored",
+  "domain_id": 91,
+  "robot": "red_standard_robot1",
+  "tunnel": "red_tunnel",
+  "goal": [
+    -1.2,
+    3.475,
+    0.0
+  ],
+  "cancel_test": false,
+  "resume_test": true,
+  "nav2_status": 4,
+  "entered": true,
+  "complete_footprint_exited": true,
+  "final_lift": -5.049676821513695e-13,
+  "final_guard": [
+    -1.2051610620704594,
+    3.478534842665982,
+    1.8756576939862876e-05,
+    0.003233243874163338,
+    2.9372484508942163e-12,
+    0.0
+  ],
+  "tf_samples": 159,
+  "phases": [
+    "crossing:red_tunnel",
+    "resume_inside_tunnel:red_tunnel",
+    "align_chassis_and_gimbal:red_tunnel",
+    "lowering:red_tunnel",
+    "wait_local_clearance:red_tunnel",
+    "crossing:red_tunnel",
+    "raising_after_exit:red_tunnel"
+  ],
+  "violations": [],
+  "elapsed": 17.038318557009916
+}

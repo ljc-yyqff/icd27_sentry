@@ -1,0 +1,201 @@
+{
+  "passed": true,
+  "reason": "all route goals succeeded",
+  "domain_id": 91,
+  "results": [
+    {
+      "goal": [
+        -1.52,
+        3.54
+      ],
+      "status": 4,
+      "elapsed": 3.921900301000278,
+      "final_guard": [
+        -1.502783386923161,
+        3.473824626546211,
+        -0.0001000920012540896,
+        0.001126806983896014,
+        2.358609182723598e-05,
+        0.0
+      ],
+      "physical_goal_error": 0.06837829931773703
+    },
+    {
+      "goal": [
+        -0.28,
+        -0.08
+      ],
+      "status": 4,
+      "elapsed": 6.112156635000247,
+      "final_guard": [
+        -0.27466018077985144,
+        0.030768265975623432,
+        1.0883193938218179,
+        0.48484317650757774,
+        3.1335681382746867,
+        0.0
+      ],
+      "physical_goal_error": 0.11089689994111794
+    },
+    {
+      "goal": [
+        0.425,
+        -3.475
+      ],
+      "status": 4,
+      "elapsed": 15.050823920999392,
+      "final_guard": [
+        0.4249975263708077,
+        -3.4661966964193542,
+        7.087428690494907e-05,
+        0.1213840468335281,
+        -0.00010237199557881332,
+        0.0
+      ],
+      "physical_goal_error": 0.008803303928176819
+    },
+    {
+      "goal": [
+        4.575,
+        -3.475
+      ],
+      "status": 4,
+      "elapsed": 9.503237036999963,
+      "final_guard": [
+        4.575522010203488,
+        -3.4732918842746328,
+        7.681198323779699e-05,
+        0.0002461252420343922,
+        -1.2535088307749282e-06,
+        0.0
+      ],
+      "physical_goal_error": 0.0017861002166151578
+    },
+    {
+      "goal": [
+        0.425,
+        -3.475
+      ],
+      "status": 4,
+      "elapsed": 6.630956396000329,
+      "final_guard": [
+        0.41689825819027515,
+        -3.473534061793755,
+        -2.278387161546303e-05,
+        0.0003046152715617215,
+        -5.571778131925112e-07,
+        0.0
+      ],
+      "physical_goal_error": 0.008233297952580902
+    },
+    {
+      "goal": [
+        -1.2,
+        3.475
+      ],
+      "status": 4,
+      "elapsed": 13.650611804999244,
+      "final_guard": [
+        -1.197880171930179,
+        3.4729938302788557,
+        -6.182564588053e-07,
+        0.25823622420839853,
+        3.778592026876018e-05,
+        0.0
+      ],
+      "physical_goal_error": 0.0029186277590054835
+    },
+    {
+      "goal": [
+        -4.575,
+        3.475
+      ],
+      "status": 4,
+      "elapsed": 8.332328071999655,
+      "final_guard": [
+        -4.575571708076912,
+        3.473922279844611,
+        -9.887508683316936e-05,
+        0.0001687684653702843,
+        9.802298244840095e-11,
+        0.0
+      ],
+      "physical_goal_error": 0.0012199716630061164
+    }
+  ],
+  "phases": [
+    "planning",
+    "stopping_before_tunnel:red_tunnel",
+    "align_chassis_and_gimbal:red_tunnel",
+    "lowering:red_tunnel",
+    "wait_local_clearance:red_tunnel",
+    "crossing:red_tunnel",
+    "raising_after_exit:red_tunnel",
+    "planning",
+    "stopping_to_leave_guide:red_tunnel",
+    "align_chassis_and_gimbal:red_tunnel",
+    "following_axis_aligned_guide:red_tunnel",
+    "planning",
+    "normal_follow",
+    "planning",
+    "planning_approach:blue_tunnel",
+    "approach_wait_point:blue_tunnel",
+    "stopping_before_tunnel:blue_tunnel",
+    "align_chassis_and_gimbal:blue_tunnel",
+    "following_axis_aligned_guide:blue_tunnel",
+    "planning",
+    "stopping_before_tunnel:blue_tunnel",
+    "align_chassis_and_gimbal:blue_tunnel",
+    "lowering:blue_tunnel",
+    "wait_local_clearance:blue_tunnel",
+    "crossing:blue_tunnel",
+    "raising_after_exit:blue_tunnel",
+    "planning",
+    "stopping_before_tunnel:blue_tunnel",
+    "align_chassis_and_gimbal:blue_tunnel",
+    "lowering:blue_tunnel",
+    "wait_local_clearance:blue_tunnel",
+    "crossing:blue_tunnel",
+    "raising_after_exit:blue_tunnel",
+    "planning",
+    "planning_approach:red_tunnel",
+    "approach_wait_point:red_tunnel",
+    "stopping_before_tunnel:red_tunnel",
+    "align_chassis_and_gimbal:red_tunnel",
+    "following_axis_aligned_guide:red_tunnel",
+    "planning",
+    "stopping_before_tunnel:red_tunnel",
+    "align_chassis_and_gimbal:red_tunnel",
+    "lowering:red_tunnel",
+    "wait_local_clearance:red_tunnel",
+    "crossing:red_tunnel",
+    "raising_after_exit:red_tunnel"
+  ],
+  "violations": [],
+  "max_output_blocked_wall_seconds": 0.3555976940006076,
+  "crossing_speed": {
+    "crossing:red_tunnel": {
+      "max": 1.799934288401956,
+      "median": 0.7483822519618333,
+      "samples": 157
+    },
+    "crossing:blue_tunnel": {
+      "max": 1.8031345127706067,
+      "median": 1.1203555994637147,
+      "samples": 221
+    }
+  },
+  "roof_speed": {
+    "red_tunnel": {
+      "max": 1.79896890603275,
+      "median": 1.7944144808857312,
+      "samples": 11
+    },
+    "blue_tunnel": {
+      "max": 1.7998764690157145,
+      "median": 1.7991788522676488,
+      "samples": 10
+    }
+  },
+  "elapsed": 65.87977839700034
+}

@@ -1,0 +1,21 @@
+Running main() from /opt/ros/humble/src/gtest_vendor/src/gtest_main.cc
+[==========] Running 6 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 6 tests from TunnelClearance
+[ RUN      ] TunnelClearance.RoofOnlyClearsWithEnoughVerticalClearance
+[       OK ] TunnelClearance.RoofOnlyClearsWithEnoughVerticalClearance (0 ms)
+[ RUN      ] TunnelClearance.EntranceEdgesClearButLateralWallBoundariesRemain
+[       OK ] TunnelClearance.EntranceEdgesClearButLateralWallBoundariesRemain (0 ms)
+[ RUN      ] TunnelClearance.ClearanceIsRelativeToTheConfiguredFloor
+[       OK ] TunnelClearance.ClearanceIsRelativeToTheConfiguredFloor (0 ms)
+[ RUN      ] TunnelClearance.CloudCoordinatesMustBeTransformedIntoMap
+[       OK ] TunnelClearance.CloudCoordinatesMustBeTransformedIntoMap (0 ms)
+[ RUN      ] TunnelClearance.BothJointsMustBeFreshAndAtTheRequiredPose
+[       OK ] TunnelClearance.BothJointsMustBeFreshAndAtTheRequiredPose (0 ms)
+[ RUN      ] TunnelClearance.TimeJumpsAndInvalidNumbersFailClosed
+[       OK ] TunnelClearance.TimeJumpsAndInvalidNumbersFailClosed (0 ms)
+[----------] 6 tests from TunnelClearance (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 6 tests.

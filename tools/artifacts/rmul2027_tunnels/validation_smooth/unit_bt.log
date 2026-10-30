@@ -1,0 +1,332 @@
+Running main() from /opt/ros/humble/src/gtest_vendor/src/gtest_main.cc
+[==========] Running 33 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 33 tests from TunnelBt
+[ RUN      ] TunnelBt.NormalFollowingIssuesANewPlannerRequestOnFirstReplan
+[INFO] [1793294732.760232967] [tunnel_bt_test_1.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294732.760331952] [tunnel_bt_test_1.tunnel_bt_io]: Tunnel BT: normal_follow
+[       OK ] TunnelBt.NormalFollowingIssuesANewPlannerRequestOnFirstReplan (379 ms)
+[ RUN      ] TunnelBt.OpenStagingApproachKeepsNormalMotionAndReplanningUntilStationaryAlignment
+[INFO] [1793294733.131388074] [tunnel_bt_test_2.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294733.131431856] [tunnel_bt_test_2.tunnel_bt_io]: Tunnel BT: planning_approach:test_tunnel
+[INFO] [1793294733.137692790] [tunnel_bt_test_2.tunnel_bt_io]: Tunnel BT: approach_wait_point:test_tunnel
+[INFO] [1793294733.506644067] [tunnel_bt_test_2.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294733.525418674] [tunnel_bt_test_2.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[       OK ] TunnelBt.OpenStagingApproachKeepsNormalMotionAndReplanningUntilStationaryAlignment (414 ms)
+[ RUN      ] TunnelBt.BlueTunnelUsesTheSameLowerCrossRaiseSequenceAndCruiseLimit
+[INFO] [1793294733.544674500] [tunnel_bt_test_3.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294733.544704096] [tunnel_bt_test_3.tunnel_bt_io]: Tunnel BT: planning_approach:blue_tunnel
+[INFO] [1793294733.550953789] [tunnel_bt_test_3.tunnel_bt_io]: Tunnel BT: approach_wait_point:blue_tunnel
+[INFO] [1793294733.563479023] [tunnel_bt_test_3.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:blue_tunnel
+[INFO] [1793294733.582215148] [tunnel_bt_test_3.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:blue_tunnel
+[INFO] [1793294733.600938859] [tunnel_bt_test_3.tunnel_bt_io]: Tunnel BT: lowering:blue_tunnel
+[INFO] [1793294733.625949043] [tunnel_bt_test_3.tunnel_bt_io]: Tunnel BT: wait_local_clearance:blue_tunnel
+[INFO] [1793294733.644741954] [tunnel_bt_test_3.tunnel_bt_io]: Tunnel BT: crossing:blue_tunnel
+[INFO] [1793294733.657269703] [tunnel_bt_test_3.tunnel_bt_io]: Tunnel BT: raising_after_exit:blue_tunnel
+[INFO] [1793294733.682255721] [tunnel_bt_test_3.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294733.688554085] [tunnel_bt_test_3.tunnel_bt_io]: Tunnel BT: normal_follow
+[       OK ] TunnelBt.BlueTunnelUsesTheSameLowerCrossRaiseSequenceAndCruiseLimit (169 ms)
+[ RUN      ] TunnelBt.OrdinaryGoalFromInsideTheExitGuideFirstReachesItsOpenEndWithoutLowering
+[INFO] [1793294733.714536516] [tunnel_bt_test_4.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294733.714573545] [tunnel_bt_test_4.tunnel_bt_io]: Tunnel BT: stopping_to_leave_guide:test_tunnel
+[INFO] [1793294733.733377366] [tunnel_bt_test_4.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294733.752151462] [tunnel_bt_test_4.tunnel_bt_io]: Tunnel BT: following_axis_aligned_guide:test_tunnel
+[INFO] [1793294733.764696093] [tunnel_bt_test_4.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294733.770947389] [tunnel_bt_test_4.tunnel_bt_io]: Tunnel BT: normal_follow
+[       OK ] TunnelBt.OrdinaryGoalFromInsideTheExitGuideFirstReachesItsOpenEndWithoutLowering (83 ms)
+[ RUN      ] TunnelBt.OrdinaryEntryToAHighGuideGoalAlignsAtItsOpenStagingPoint
+[INFO] [1793294733.796884795] [tunnel_bt_test_5.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294733.796930831] [tunnel_bt_test_5.tunnel_bt_io]: Tunnel BT: planning_approach:test_tunnel
+[INFO] [1793294733.803218425] [tunnel_bt_test_5.tunnel_bt_io]: Tunnel BT: approach_wait_point:test_tunnel
+[INFO] [1793294733.815723983] [tunnel_bt_test_5.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294733.834504410] [tunnel_bt_test_5.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294733.853267656] [tunnel_bt_test_5.tunnel_bt_io]: Tunnel BT: following_axis_aligned_guide:test_tunnel
+[       OK ] TunnelBt.OrdinaryEntryToAHighGuideGoalAlignsAtItsOpenStagingPoint (82 ms)
+[ RUN      ] TunnelBt.FailedGlobalPlanInsideTheGuideGetsOnlyOneSameSideEscapeAttempt
+[INFO] [1793294733.879035576] [tunnel_bt_test_6.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294733.879069559] [tunnel_bt_test_6.tunnel_bt_io]: Tunnel BT: stopping_to_leave_guide:test_tunnel
+[INFO] [1793294733.897758696] [tunnel_bt_test_6.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294733.916476467] [tunnel_bt_test_6.tunnel_bt_io]: Tunnel BT: following_axis_aligned_guide:test_tunnel
+[INFO] [1793294733.928937040] [tunnel_bt_test_6.tunnel_bt_io]: Tunnel BT: planning
+[ERROR] [1793294733.935203685] [tunnel_bt_test_6.tunnel_bt_io]: Tunnel BT stopped: global planning failed
+[       OK ] TunnelBt.FailedGlobalPlanInsideTheGuideGetsOnlyOneSameSideEscapeAttempt (69 ms)
+[ RUN      ] TunnelBt.MisalignedHighPoseInsideTheGuideDoesNotTryABlindTurn
+[INFO] [1793294733.948441070] [tunnel_bt_test_7.tunnel_bt_io]: Tunnel BT: planning
+[ERROR] [1793294733.948476537] [tunnel_bt_test_7.tunnel_bt_io]: Tunnel BT stopped: cannot safely realign or escape the narrow guide
+[       OK ] TunnelBt.MisalignedHighPoseInsideTheGuideDoesNotTryABlindTurn (13 ms)
+[ RUN      ] TunnelBt.AGoalUpdateWhileLeavingAHighGuideKeepsItsAxisControllerUntilOpenSpace
+[INFO] [1793294733.961230799] [tunnel_bt_test_8.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294733.961258391] [tunnel_bt_test_8.tunnel_bt_io]: Tunnel BT: planning_approach:test_tunnel
+[INFO] [1793294733.967513774] [tunnel_bt_test_8.tunnel_bt_io]: Tunnel BT: approach_wait_point:test_tunnel
+[INFO] [1793294733.979959370] [tunnel_bt_test_8.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294733.998672672] [tunnel_bt_test_8.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294734.017339667] [tunnel_bt_test_8.tunnel_bt_io]: Tunnel BT: following_axis_aligned_guide:test_tunnel
+[INFO] [1793294734.029844383] [tunnel_bt_test_8.tunnel_bt_io]: Tunnel BT: updated goal deferred until the committed passage safely exits
+[INFO] [1793294734.036109495] [tunnel_bt_test_8.tunnel_bt_io]: Tunnel BT: following_axis_aligned_guide:test_tunnel
+[INFO] [1793294734.048591038] [tunnel_bt_test_8.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294734.054846772] [tunnel_bt_test_8.tunnel_bt_io]: Tunnel BT: normal_follow
+[       OK ] TunnelBt.AGoalUpdateWhileLeavingAHighGuideKeepsItsAxisControllerUntilOpenSpace (107 ms)
+[ RUN      ] TunnelBt.LoweredPoseLeavingTheGuideUsesVerifiedLowTraversalBeforeRestoring
+[INFO] [1793294734.068235300] [tunnel_bt_test_9.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294734.068277790] [tunnel_bt_test_9.tunnel_bt_io]: Tunnel BT: stopping_to_leave_guide:test_tunnel
+[INFO] [1793294734.087035825] [tunnel_bt_test_9.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294734.105696289] [tunnel_bt_test_9.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294734.124449225] [tunnel_bt_test_9.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294734.143192363] [tunnel_bt_test_9.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[INFO] [1793294734.155699033] [tunnel_bt_test_9.tunnel_bt_io]: Tunnel BT: raising_after_exit:test_tunnel
+[INFO] [1793294734.180636821] [tunnel_bt_test_9.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294734.186926669] [tunnel_bt_test_9.tunnel_bt_io]: Tunnel BT: normal_follow
+[       OK ] TunnelBt.LoweredPoseLeavingTheGuideUsesVerifiedLowTraversalBeforeRestoring (132 ms)
+[ RUN      ] TunnelBt.ExecutesLowerCrossRaiseAndContinuesToTheFinalGoal
+[INFO] [1793294734.200160788] [tunnel_bt_test_10.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294734.200189893] [tunnel_bt_test_10.tunnel_bt_io]: Tunnel BT: planning_approach:test_tunnel
+[INFO] [1793294734.206434506] [tunnel_bt_test_10.tunnel_bt_io]: Tunnel BT: approach_wait_point:test_tunnel
+[INFO] [1793294734.218928552] [tunnel_bt_test_10.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294734.237663725] [tunnel_bt_test_10.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294734.256393358] [tunnel_bt_test_10.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294734.281374827] [tunnel_bt_test_10.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294734.300092147] [tunnel_bt_test_10.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[INFO] [1793294734.312583488] [tunnel_bt_test_10.tunnel_bt_io]: Tunnel BT: raising_after_exit:test_tunnel
+[INFO] [1793294734.337698597] [tunnel_bt_test_10.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294734.344014164] [tunnel_bt_test_10.tunnel_bt_io]: Tunnel BT: normal_follow
+[       OK ] TunnelBt.ExecutesLowerCrossRaiseAndContinuesToTheFinalGoal (170 ms)
+[ RUN      ] TunnelBt.GoalInsideTheTunnelFinishesWithTheChassisLowered
+[INFO] [1793294734.370014999] [tunnel_bt_test_11.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294734.370052449] [tunnel_bt_test_11.tunnel_bt_io]: Tunnel BT: planning_approach:test_tunnel
+[INFO] [1793294734.376301701] [tunnel_bt_test_11.tunnel_bt_io]: Tunnel BT: approach_wait_point:test_tunnel
+[INFO] [1793294734.388868553] [tunnel_bt_test_11.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294734.407606051] [tunnel_bt_test_11.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294734.426352815] [tunnel_bt_test_11.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294734.451300392] [tunnel_bt_test_11.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294734.470188350] [tunnel_bt_test_11.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[       OK ] TunnelBt.GoalInsideTheTunnelFinishesWithTheChassisLowered (129 ms)
+[ RUN      ] TunnelBt.ASecondGoalCanStartFromTheAlreadyCenteredApproach
+[INFO] [1793294734.505894178] [tunnel_bt_test_12.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294734.505950413] [tunnel_bt_test_12.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294734.525321675] [tunnel_bt_test_12.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294734.544533148] [tunnel_bt_test_12.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294734.569703100] [tunnel_bt_test_12.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294734.588581681] [tunnel_bt_test_12.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[       OK ] TunnelBt.ASecondGoalCanStartFromTheAlreadyCenteredApproach (109 ms)
+[ RUN      ] TunnelBt.ClearRoofGoalOnTheExitCenterlineRestoresWithoutResumingSpin
+[INFO] [1793294734.609243626] [tunnel_bt_test_13.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294734.609290303] [tunnel_bt_test_13.tunnel_bt_io]: Tunnel BT: planning_approach:test_tunnel
+[INFO] [1793294734.615629965] [tunnel_bt_test_13.tunnel_bt_io]: Tunnel BT: approach_wait_point:test_tunnel
+[INFO] [1793294734.628203299] [tunnel_bt_test_13.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294734.647024673] [tunnel_bt_test_13.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294734.665827342] [tunnel_bt_test_13.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294734.690953993] [tunnel_bt_test_13.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294734.709876486] [tunnel_bt_test_13.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[INFO] [1793294734.722444871] [tunnel_bt_test_13.tunnel_bt_io]: Tunnel BT: raising_after_exit:test_tunnel
+[       OK ] TunnelBt.ClearRoofGoalOnTheExitCenterlineRestoresWithoutResumingSpin (152 ms)
+[ RUN      ] TunnelBt.SlightlyOffCenterGuideGoalFinishesAtSafeCenterlineWithoutResumingSpin
+[INFO] [1793294734.760887325] [tunnel_bt_test_14.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294734.760923713] [tunnel_bt_test_14.tunnel_bt_io]: Tunnel BT: planning_approach:test_tunnel
+[INFO] [1793294734.767183294] [tunnel_bt_test_14.tunnel_bt_io]: Tunnel BT: approach_wait_point:test_tunnel
+[INFO] [1793294734.779786304] [tunnel_bt_test_14.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294734.798542055] [tunnel_bt_test_14.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294734.817279302] [tunnel_bt_test_14.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294734.842240544] [tunnel_bt_test_14.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294734.861007406] [tunnel_bt_test_14.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[INFO] [1793294734.873577234] [tunnel_bt_test_14.tunnel_bt_io]: Tunnel BT: raising_after_exit:test_tunnel
+[       OK ] TunnelBt.SlightlyOffCenterGuideGoalFinishesAtSafeCenterlineWithoutResumingSpin (151 ms)
+[ RUN      ] TunnelBt.OffCenterGuideGoalIsProjectedBeforePlanningButRetainsTheUserRequest
+[INFO] [1793294734.911480690] [tunnel_bt_test_15.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294734.911513802] [tunnel_bt_test_15.tunnel_bt_io]: Tunnel BT: planning_approach:test_tunnel
+[INFO] [1793294734.917763775] [tunnel_bt_test_15.tunnel_bt_io]: Tunnel BT: approach_wait_point:test_tunnel
+[INFO] [1793294734.930260136] [tunnel_bt_test_15.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294734.948970412] [tunnel_bt_test_15.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294734.967704794] [tunnel_bt_test_15.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294734.992687275] [tunnel_bt_test_15.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294735.011466470] [tunnel_bt_test_15.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[INFO] [1793294735.024009077] [tunnel_bt_test_15.tunnel_bt_io]: Tunnel BT: raising_after_exit:test_tunnel
+[       OK ] TunnelBt.OffCenterGuideGoalIsProjectedBeforePlanningButRetainsTheUserRequest (150 ms)
+[ RUN      ] TunnelBt.SlightlyOffCenterRoofGoalFinishesLowOnTheSafeCenterline
+[INFO] [1793294735.062129549] [tunnel_bt_test_16.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294735.062170525] [tunnel_bt_test_16.tunnel_bt_io]: Tunnel BT: planning_approach:test_tunnel
+[INFO] [1793294735.068413005] [tunnel_bt_test_16.tunnel_bt_io]: Tunnel BT: approach_wait_point:test_tunnel
+[INFO] [1793294735.080888877] [tunnel_bt_test_16.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294735.099657953] [tunnel_bt_test_16.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294735.118380713] [tunnel_bt_test_16.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294735.143415402] [tunnel_bt_test_16.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294735.162158219] [tunnel_bt_test_16.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[       OK ] TunnelBt.SlightlyOffCenterRoofGoalFinishesLowOnTheSafeCenterline (126 ms)
+[ RUN      ] TunnelBt.UnsafeOffCenterRoofGoalFailsLowRatherThanCuttingTheSideWall
+[INFO] [1793294735.187706118] [tunnel_bt_test_17.tunnel_bt_io]: Tunnel BT: resume_inside_tunnel:test_tunnel
+[INFO] [1793294735.200217637] [tunnel_bt_test_17.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294735.218915069] [tunnel_bt_test_17.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294735.237602593] [tunnel_bt_test_17.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[ERROR] [1793294735.256310826] [tunnel_bt_test_17.tunnel_bt_io]: Tunnel BT stopped: goal under roof is outside the safe centreline tolerance
+[       OK ] TunnelBt.UnsafeOffCenterRoofGoalFailsLowRatherThanCuttingTheSideWall (81 ms)
+[ RUN      ] TunnelBt.ExactReverseExitGoalToleratesFloatingPointArithmetic
+[INFO] [1793294735.269141040] [tunnel_bt_test_18.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294735.269165596] [tunnel_bt_test_18.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294735.287950111] [tunnel_bt_test_18.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294735.306637936] [tunnel_bt_test_18.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294735.331521122] [tunnel_bt_test_18.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294735.350262336] [tunnel_bt_test_18.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[INFO] [1793294735.362772993] [tunnel_bt_test_18.tunnel_bt_io]: Tunnel BT: raising_after_exit:test_tunnel
+[       OK ] TunnelBt.ExactReverseExitGoalToleratesFloatingPointArithmetic (132 ms)
+[ RUN      ] TunnelBt.BlueGuideAlignmentUsesOpenStagingThenTwoAxisLegs
+[INFO] [1793294735.400775324] [tunnel_bt_test_19.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294735.400802284] [tunnel_bt_test_19.tunnel_bt_io]: Tunnel BT: planning_approach:blue_tunnel
+[INFO] [1793294735.407065312] [tunnel_bt_test_19.tunnel_bt_io]: Tunnel BT: approach_wait_point:blue_tunnel
+[INFO] [1793294735.419555060] [tunnel_bt_test_19.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:blue_tunnel
+[INFO] [1793294735.438277790] [tunnel_bt_test_19.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:blue_tunnel
+[INFO] [1793294735.456899921] [tunnel_bt_test_19.tunnel_bt_io]: Tunnel BT: following_axis_aligned_guide:blue_tunnel
+[       OK ] TunnelBt.BlueGuideAlignmentUsesOpenStagingThenTwoAxisLegs (75 ms)
+[ RUN      ] TunnelBt.ExactGuideEndpointGoalStillOwnsAxisAlignment
+[INFO] [1793294735.475458835] [tunnel_bt_test_20.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294735.475483701] [tunnel_bt_test_20.tunnel_bt_io]: Tunnel BT: planning_approach:blue_tunnel
+[INFO] [1793294735.481678452] [tunnel_bt_test_20.tunnel_bt_io]: Tunnel BT: approach_wait_point:blue_tunnel
+[INFO] [1793294735.494172327] [tunnel_bt_test_20.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:blue_tunnel
+[INFO] [1793294735.512878727] [tunnel_bt_test_20.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:blue_tunnel
+[INFO] [1793294735.531653193] [tunnel_bt_test_20.tunnel_bt_io]: Tunnel BT: following_axis_aligned_guide:blue_tunnel
+[       OK ] TunnelBt.ExactGuideEndpointGoalStillOwnsAxisAlignment (81 ms)
+[ RUN      ] TunnelBt.RecentersOutsideBeforeStartingThePassage
+[INFO] [1793294735.557116293] [tunnel_bt_test_21.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294735.557145718] [tunnel_bt_test_21.tunnel_bt_io]: Tunnel BT: planning_approach:test_tunnel
+[INFO] [1793294735.563411211] [tunnel_bt_test_21.tunnel_bt_io]: Tunnel BT: approach_wait_point:test_tunnel
+[INFO] [1793294735.575870522] [tunnel_bt_test_21.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294735.594550952] [tunnel_bt_test_21.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294735.613329707] [tunnel_bt_test_21.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294735.638308642] [tunnel_bt_test_21.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294735.657024879] [tunnel_bt_test_21.tunnel_bt_io]: Tunnel BT: centering_before_entry:test_tunnel
+[INFO] [1793294735.669544483] [tunnel_bt_test_21.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[       OK ] TunnelBt.RecentersOutsideBeforeStartingThePassage (126 ms)
+[ RUN      ] TunnelBt.AGoalUpdateWhileLoweringDoesNotReleaseOrdinarySpinInTheApproach
+[INFO] [1793294735.682587666] [tunnel_bt_test_22.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294735.682618403] [tunnel_bt_test_22.tunnel_bt_io]: Tunnel BT: planning_approach:test_tunnel
+[INFO] [1793294735.688825677] [tunnel_bt_test_22.tunnel_bt_io]: Tunnel BT: approach_wait_point:test_tunnel
+[INFO] [1793294735.701278766] [tunnel_bt_test_22.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294735.719999162] [tunnel_bt_test_22.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294735.738693769] [tunnel_bt_test_22.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294735.744946708] [tunnel_bt_test_22.tunnel_bt_io]: Tunnel BT: updated goal deferred until the committed passage safely exits
+[INFO] [1793294735.769910344] [tunnel_bt_test_22.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294735.788671967] [tunnel_bt_test_22.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[       OK ] TunnelBt.AGoalUpdateWhileLoweringDoesNotReleaseOrdinarySpinInTheApproach (125 ms)
+[ RUN      ] TunnelBt.AGoalUpdateWhileCenteringFinishesTheCommittedManeuverFirst
+[INFO] [1793294735.807952329] [tunnel_bt_test_23.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294735.807976384] [tunnel_bt_test_23.tunnel_bt_io]: Tunnel BT: planning_approach:test_tunnel
+[INFO] [1793294735.814253218] [tunnel_bt_test_23.tunnel_bt_io]: Tunnel BT: approach_wait_point:test_tunnel
+[INFO] [1793294735.826811554] [tunnel_bt_test_23.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294735.845590930] [tunnel_bt_test_23.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294735.864326093] [tunnel_bt_test_23.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294735.889189882] [tunnel_bt_test_23.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294735.907912181] [tunnel_bt_test_23.tunnel_bt_io]: Tunnel BT: centering_before_entry:test_tunnel
+[INFO] [1793294735.914174788] [tunnel_bt_test_23.tunnel_bt_io]: Tunnel BT: updated goal deferred until the committed passage safely exits
+[INFO] [1793294735.920465889] [tunnel_bt_test_23.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[       OK ] TunnelBt.AGoalUpdateWhileCenteringFinishesTheCommittedManeuverFirst (126 ms)
+[ RUN      ] TunnelBt.NewGoalDuringAnInsideTargetDoesNotSucceedAtTheOldGoal
+[INFO] [1793294735.933668900] [tunnel_bt_test_24.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294735.933713864] [tunnel_bt_test_24.tunnel_bt_io]: Tunnel BT: planning_approach:test_tunnel
+[INFO] [1793294735.939966493] [tunnel_bt_test_24.tunnel_bt_io]: Tunnel BT: approach_wait_point:test_tunnel
+[INFO] [1793294735.952460779] [tunnel_bt_test_24.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294735.971150146] [tunnel_bt_test_24.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294735.989859411] [tunnel_bt_test_24.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294736.014768375] [tunnel_bt_test_24.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294736.033526461] [tunnel_bt_test_24.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[INFO] [1793294736.046054941] [tunnel_bt_test_24.tunnel_bt_io]: Tunnel BT: updated goal deferred until the committed passage safely exits
+[INFO] [1793294736.052352724] [tunnel_bt_test_24.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[       OK ] TunnelBt.NewGoalDuringAnInsideTargetDoesNotSucceedAtTheOldGoal (138 ms)
+[ RUN      ] TunnelBt.CancellingInsideKeepsItLowAndNewGoalResumesTowardTheOtherExit
+[INFO] [1793294736.071798426] [tunnel_bt_test_25.tunnel_bt_io]: Tunnel BT: resume_inside_tunnel:test_tunnel
+[INFO] [1793294736.084262786] [tunnel_bt_test_25.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294736.102974595] [tunnel_bt_test_25.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294736.121690442] [tunnel_bt_test_25.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294736.140412310] [tunnel_bt_test_25.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[INFO] [1793294736.146631236] [tunnel_bt_test_25.tunnel_bt_io]: Tunnel BT: resume_inside_tunnel:test_tunnel
+[INFO] [1793294736.159074146] [tunnel_bt_test_25.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294736.177678615] [tunnel_bt_test_25.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294736.196441480] [tunnel_bt_test_25.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294736.215177164] [tunnel_bt_test_25.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[       OK ] TunnelBt.CancellingInsideKeepsItLowAndNewGoalResumesTowardTheOtherExit (169 ms)
+[ RUN      ] TunnelBt.WaitsForInitialPoseBeforeDecidingWhetherItIsInside
+[INFO] [1793294736.246716813] [tunnel_bt_test_26.tunnel_bt_io]: Tunnel BT: resume_inside_tunnel:test_tunnel
+[INFO] [1793294736.259224284] [tunnel_bt_test_26.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294736.277907590] [tunnel_bt_test_26.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294736.296626553] [tunnel_bt_test_26.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294736.315311903] [tunnel_bt_test_26.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[       OK ] TunnelBt.WaitsForInitialPoseBeforeDecidingWhetherItIsInside (88 ms)
+[ RUN      ] TunnelBt.RepeatedIdenticalWaypointMissionStartsAgainAtTheFirstWaypoint
+[INFO] [1793294736.328937083] [tunnel_bt_test_27.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294736.328966138] [tunnel_bt_test_27.tunnel_bt_io]: Tunnel BT: normal_follow
+[INFO] [1793294736.341424737] [tunnel_bt_test_27.tunnel_bt_io]: Tunnel BT: next_waypoint
+[INFO] [1793294736.347683938] [tunnel_bt_test_27.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294736.347706160] [tunnel_bt_test_27.tunnel_bt_io]: Tunnel BT: normal_follow
+[INFO] [1793294736.366347858] [tunnel_bt_test_27.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294736.366369418] [tunnel_bt_test_27.tunnel_bt_io]: Tunnel BT: normal_follow
+[       OK ] TunnelBt.RepeatedIdenticalWaypointMissionStartsAgainAtTheFirstWaypoint (50 ms)
+[ RUN      ] TunnelBt.BlockedCrossingFailsAndHoldsTheLoweredTarget
+[INFO] [1793294736.378839069] [tunnel_bt_test_28.tunnel_bt_io]: Tunnel BT: resume_inside_tunnel:test_tunnel
+[INFO] [1793294736.391385773] [tunnel_bt_test_28.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294736.410150271] [tunnel_bt_test_28.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294736.428913847] [tunnel_bt_test_28.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294736.447702119] [tunnel_bt_test_28.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[ERROR] [1793294736.460249064] [tunnel_bt_test_28.tunnel_bt_io]: Tunnel BT stopped: passage blocked; held low, no blind backup
+[       OK ] TunnelBt.BlockedCrossingFailsAndHoldsTheLoweredTarget (97 ms)
+[ RUN      ] TunnelBt.ClearanceBecomingFalseDuringCrossingStopsAndKeepsItLow
+[INFO] [1793294736.475454078] [tunnel_bt_test_29.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294736.475487410] [tunnel_bt_test_29.tunnel_bt_io]: Tunnel BT: planning_approach:test_tunnel
+[INFO] [1793294736.481733597] [tunnel_bt_test_29.tunnel_bt_io]: Tunnel BT: approach_wait_point:test_tunnel
+[INFO] [1793294736.494246057] [tunnel_bt_test_29.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294736.512979587] [tunnel_bt_test_29.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294736.531671760] [tunnel_bt_test_29.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294736.556634695] [tunnel_bt_test_29.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294736.575362194] [tunnel_bt_test_29.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[WARN] [1793294736.587870787] [tunnel_bt_test_29.tunnel_bt_io]: Tunnel BT: paused low for valid lift, gimbal and fresh local clearance
+[ERROR] [1793294737.591633343] [tunnel_bt_test_29.tunnel_bt_io]: Tunnel BT stopped: lift / gimbal / local clearance did not recover; held low
+[       OK ] TunnelBt.ClearanceBecomingFalseDuringCrossingStopsAndKeepsItLow (1130 ms)
+[ RUN      ] TunnelBt.ClearanceFeedbackLossDuringCrossingStopsAndKeepsItLow
+[INFO] [1793294737.606355163] [tunnel_bt_test_30.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294737.606391962] [tunnel_bt_test_30.tunnel_bt_io]: Tunnel BT: planning_approach:test_tunnel
+[INFO] [1793294737.612675318] [tunnel_bt_test_30.tunnel_bt_io]: Tunnel BT: approach_wait_point:test_tunnel
+[INFO] [1793294737.625266035] [tunnel_bt_test_30.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294737.644062081] [tunnel_bt_test_30.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294737.662872155] [tunnel_bt_test_30.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294737.687936299] [tunnel_bt_test_30.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294737.706728238] [tunnel_bt_test_30.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[WARN] [1793294738.275731867] [tunnel_bt_test_30.tunnel_bt_io]: Tunnel BT: paused low for valid lift, gimbal and fresh local clearance
+[ERROR] [1793294739.278043822] [tunnel_bt_test_30.tunnel_bt_io]: Tunnel BT stopped: lift / gimbal / local clearance did not recover; held low
+[       OK ] TunnelBt.ClearanceFeedbackLossDuringCrossingStopsAndKeepsItLow (1686 ms)
+[ RUN      ] TunnelBt.TransientLiftDeviationStopsThenResumesOnlyAfterValidFeedback
+[INFO] [1793294739.292621433] [tunnel_bt_test_31.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294739.292665285] [tunnel_bt_test_31.tunnel_bt_io]: Tunnel BT: planning_approach:test_tunnel
+[INFO] [1793294739.298948660] [tunnel_bt_test_31.tunnel_bt_io]: Tunnel BT: approach_wait_point:test_tunnel
+[INFO] [1793294739.311605922] [tunnel_bt_test_31.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294739.330571606] [tunnel_bt_test_31.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294739.349546467] [tunnel_bt_test_31.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294739.374665503] [tunnel_bt_test_31.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294739.393618864] [tunnel_bt_test_31.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[WARN] [1793294739.406207557] [tunnel_bt_test_31.tunnel_bt_io]: Tunnel BT: paused low for valid lift, gimbal and fresh local clearance
+[INFO] [1793294739.443893727] [tunnel_bt_test_31.tunnel_bt_io]: Tunnel BT: valid passage feedback restored, resuming low
+[       OK ] TunnelBt.TransientLiftDeviationStopsThenResumesOnlyAfterValidFeedback (173 ms)
+[ RUN      ] TunnelBt.PermanentLiftDeviationFailsHeldLowWithoutResuming
+[INFO] [1793294739.468262130] [tunnel_bt_test_32.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294739.468317013] [tunnel_bt_test_32.tunnel_bt_io]: Tunnel BT: planning_approach:test_tunnel
+[INFO] [1793294739.474625796] [tunnel_bt_test_32.tunnel_bt_io]: Tunnel BT: approach_wait_point:test_tunnel
+[INFO] [1793294739.487210993] [tunnel_bt_test_32.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294739.506031906] [tunnel_bt_test_32.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294739.524938229] [tunnel_bt_test_32.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294739.550094405] [tunnel_bt_test_32.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294739.568885112] [tunnel_bt_test_32.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[WARN] [1793294739.581492881] [tunnel_bt_test_32.tunnel_bt_io]: Tunnel BT: paused low for valid lift, gimbal and fresh local clearance
+[ERROR] [1793294740.585185816] [tunnel_bt_test_32.tunnel_bt_io]: Tunnel BT stopped: lift / gimbal / local clearance did not recover; held low
+[       OK ] TunnelBt.PermanentLiftDeviationFailsHeldLowWithoutResuming (1134 ms)
+[ RUN      ] TunnelBt.TransientClearanceLossStopsThenResumesOnlyWithFreshData
+[INFO] [1793294740.599315360] [tunnel_bt_test_33.tunnel_bt_io]: Tunnel BT: planning
+[INFO] [1793294740.599398806] [tunnel_bt_test_33.tunnel_bt_io]: Tunnel BT: planning_approach:test_tunnel
+[INFO] [1793294740.605736022] [tunnel_bt_test_33.tunnel_bt_io]: Tunnel BT: approach_wait_point:test_tunnel
+[INFO] [1793294740.618404194] [tunnel_bt_test_33.tunnel_bt_io]: Tunnel BT: stopping_before_tunnel:test_tunnel
+[INFO] [1793294740.637340443] [tunnel_bt_test_33.tunnel_bt_io]: Tunnel BT: align_chassis_and_gimbal:test_tunnel
+[INFO] [1793294740.656135718] [tunnel_bt_test_33.tunnel_bt_io]: Tunnel BT: lowering:test_tunnel
+[INFO] [1793294740.681399796] [tunnel_bt_test_33.tunnel_bt_io]: Tunnel BT: wait_local_clearance:test_tunnel
+[INFO] [1793294740.700378585] [tunnel_bt_test_33.tunnel_bt_io]: Tunnel BT: crossing:test_tunnel
+[WARN] [1793294740.712946729] [tunnel_bt_test_33.tunnel_bt_io]: Tunnel BT: paused low for valid lift, gimbal and fresh local clearance
+[INFO] [1793294740.731779324] [tunnel_bt_test_33.tunnel_bt_io]: Tunnel BT: valid passage feedback restored, resuming low
+[       OK ] TunnelBt.TransientClearanceLossStopsThenResumesOnlyWithFreshData (153 ms)
+[----------] 33 tests from TunnelBt (8000 ms total)
+
+[----------] Global test environment tear-down
+[==========] 33 tests from 1 test suite ran. (8040 ms total)
+[  PASSED  ] 33 tests.

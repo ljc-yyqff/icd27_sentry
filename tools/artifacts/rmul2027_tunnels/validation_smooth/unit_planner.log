@@ -1,0 +1,33 @@
+Running main() from /opt/ros/humble/src/gtest_vendor/src/gtest_main.cc
+[==========] Running 12 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 12 tests from FootprintGridPlanner
+[ RUN      ] FootprintGridPlanner.PreservesExactOffGridEndpoints
+[       OK ] FootprintGridPlanner.PreservesExactOffGridEndpoints (34 ms)
+[ RUN      ] FootprintGridPlanner.GoesAroundStaticCornerWithEntireRotatedSquare
+[       OK ] FootprintGridPlanner.GoesAroundStaticCornerWithEntireRotatedSquare (100 ms)
+[ RUN      ] FootprintGridPlanner.RejectsGoalWhoseCenterIsFreeButCornerHitsObstacle
+[       OK ] FootprintGridPlanner.RejectsGoalWhoseCenterIsFreeButCornerHitsObstacle (0 ms)
+[ RUN      ] FootprintGridPlanner.UnknownInsidePolygonAndOutsideMapRemainBlocked
+[       OK ] FootprintGridPlanner.UnknownInsidePolygonAndOutsideMapRemainBlocked (0 ms)
+[ RUN      ] FootprintGridPlanner.ExplicitPhysicalFootprintDoesNotDoubleCountInflation253
+[       OK ] FootprintGridPlanner.ExplicitPhysicalFootprintDoesNotDoubleCountInflation253 (405 ms)
+[ RUN      ] FootprintGridPlanner.DiagonalCannotCutBetweenBlockedConfigurationCells
+[       OK ] FootprintGridPlanner.DiagonalCannotCutBetweenBlockedConfigurationCells (0 ms)
+[ RUN      ] FootprintGridPlanner.NarrowGuideIsAxisAlignedInBothDirectionsAndRotationsAreChecked
+[       OK ] FootprintGridPlanner.NarrowGuideIsAxisAlignedInBothDirectionsAndRotationsAreChecked (111 ms)
+[ RUN      ] FootprintGridPlanner.VerifiedGuideDoesNotClearAnActualLowObstacle
+[       OK ] FootprintGridPlanner.VerifiedGuideDoesNotClearAnActualLowObstacle (210 ms)
+[ RUN      ] FootprintGridPlanner.MidRouteGuideWithoutBtOwnershipKeepsActualYawEverywhere
+[       OK ] FootprintGridPlanner.MidRouteGuideWithoutBtOwnershipKeepsActualYawEverywhere (240 ms)
+[ RUN      ] FootprintGridPlanner.OffWallStagingAllowsRotatedArrivalAtExactGuideEndpoint
+[       OK ] FootprintGridPlanner.OffWallStagingAllowsRotatedArrivalAtExactGuideEndpoint (29 ms)
+[ RUN      ] FootprintGridPlanner.NonFiniteEndpointsAndSegmentsFailClosed
+[       OK ] FootprintGridPlanner.NonFiniteEndpointsAndSegmentsFailClosed (0 ms)
+[ RUN      ] FootprintGridPlanner.MovingRotationCannotStandInForBtStationaryAlignment
+[       OK ] FootprintGridPlanner.MovingRotationCannotStandInForBtStationaryAlignment (0 ms)
+[----------] 12 tests from FootprintGridPlanner (1130 ms total)
+
+[----------] Global test environment tear-down
+[==========] 12 tests from 1 test suite ran. (1130 ms total)
+[  PASSED  ] 12 tests.

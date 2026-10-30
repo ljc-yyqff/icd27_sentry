@@ -1,0 +1,73 @@
+{
+  "passed": false,
+  "reason": "goal failed or timed out: [-0.28, -0.08]",
+  "domain_id": 91,
+  "results": [
+    {
+      "goal": [
+        -1.52,
+        3.54
+      ],
+      "status": 4,
+      "elapsed": 7.237105202999828,
+      "final_guard": [
+        -1.2020344638998122,
+        3.4760141395860535,
+        5.8061634198177215e-05,
+        0.2702321497672675,
+        -7.653378375470212e-05,
+        0.0
+      ]
+    },
+    {
+      "goal": [
+        -0.28,
+        -0.08
+      ],
+      "status": 6,
+      "elapsed": 6.500689287999876,
+      "final_guard": [
+        -0.23777740401084557,
+        0.853907268676636,
+        -0.9789019806925193,
+        1.224797524073303,
+        0.5427774109763625,
+        0.0
+      ]
+    }
+  ],
+  "phases": [
+    "planning",
+    "planning_approach:red_tunnel",
+    "approach_wait_point:red_tunnel",
+    "stopping_before_tunnel:red_tunnel",
+    "align_chassis_and_gimbal:red_tunnel",
+    "lowering:red_tunnel",
+    "wait_local_clearance:red_tunnel",
+    "crossing:red_tunnel",
+    "raising_after_exit:red_tunnel",
+    "planning",
+    "stopping_to_leave_guide:red_tunnel",
+    "align_chassis_and_gimbal:red_tunnel",
+    "following_axis_aligned_guide:red_tunnel",
+    "planning",
+    "normal_follow"
+  ],
+  "violations": [],
+  "max_output_blocked_wall_seconds": 0.15047908099995766,
+  "crossing_speed": {
+    "crossing:red_tunnel": {
+      "max": 1.7956514527975735,
+      "median": 1.6976511023258811,
+      "samples": 56
+    }
+  },
+  "roof_speed": {
+    "red_tunnel": {
+      "max": 1.790285030334641,
+      "median": 1.7858743867221931,
+      "samples": 5
+    }
+  },
+  "elapsed": 15.347173780000048
+}

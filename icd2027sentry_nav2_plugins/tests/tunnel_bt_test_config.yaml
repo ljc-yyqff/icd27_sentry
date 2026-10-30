@@ -1,0 +1,25 @@
+frame: map
+settle_time: 0.01
+joint_timeout: 1.0
+lift_timeout: 1.0
+speed: 1.2
+approach_speed: 1.0
+centering_speed: 0.15
+footprint: [[0.36, 0.36], [-0.36, 0.36], [-0.36, -0.36], [0.36, -0.36]]
+tunnels:
+  - id: test_tunnel
+    x_min: -2.675
+    x_max: -2.325
+    y_min: 3.06
+    y_max: 3.86
+    center_y: 3.475
+    floor_z: 0.0005
+    ceiling_z: 0.25
+  - id: blue_tunnel
+    x_min: 2.325
+    x_max: 2.675
+    y_min: -3.86
+    y_max: -3.06
+    center_y: -3.475
+    floor_z: 0.0005
+    ceiling_z: 0.25

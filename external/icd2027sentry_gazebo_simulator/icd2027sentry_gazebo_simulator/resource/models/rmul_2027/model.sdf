@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="rmul_2027">
+    <static>true</static>
+    <link name="field">
+      <visual name="blue">
+        <geometry><mesh><uri>model://rmul_2027/meshes/visual_parts/part_0.stl</uri></mesh></geometry>
+        <material><ambient>0 0 1 1</ambient><diffuse>0 0 1 1</diffuse></material>
+      </visual>
+      <visual name="green">
+        <geometry><mesh><uri>model://rmul_2027/meshes/visual_parts/part_1.stl</uri></mesh></geometry>
+        <material><ambient>0 1 0 1</ambient><diffuse>0 1 0 1</diffuse></material>
+      </visual>
+      <visual name="dark">
+        <geometry><mesh><uri>model://rmul_2027/meshes/visual_parts/part_2.stl</uri></mesh></geometry>
+        <material><ambient>0.03137 0.03137 0.03137 1</ambient><diffuse>0.03137 0.03137 0.03137 1</diffuse></material>
+      </visual>
+      <visual name="steel_blue">
+        <geometry><mesh><uri>model://rmul_2027/meshes/visual_parts/part_3.stl</uri></mesh></geometry>
+        <material><ambient>0.36078 0.59608 0.78431 1</ambient><diffuse>0.36078 0.59608 0.78431 1</diffuse></material>
+      </visual>
+      <visual name="gray">
+        <geometry><mesh><uri>model://rmul_2027/meshes/visual_parts/part_4.stl</uri></mesh></geometry>
+        <material><ambient>0.37255 0.37255 0.37255 1</ambient><diffuse>0.37255 0.37255 0.37255 1</diffuse></material>
+      </visual>
+      <visual name="light_blue">
+        <geometry><mesh><uri>model://rmul_2027/meshes/visual_parts/part_5.stl</uri></mesh></geometry>
+        <material><ambient>0.74510 0.88627 1 1</ambient><diffuse>0.74510 0.88627 1 1</diffuse></material>
+      </visual>
+      <visual name="red">
+        <geometry><mesh><uri>model://rmul_2027/meshes/visual_parts/part_6.stl</uri></mesh></geometry>
+        <material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material>
+      </visual>
+      <visual name="white">
+        <geometry><mesh><uri>model://rmul_2027/meshes/visual_parts/part_7.stl</uri></mesh></geometry>
+        <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
+      </visual>
+      <collision name="field_collision">
+        <geometry><mesh><uri>model://rmul_2027/meshes/rmul_2027.stl</uri></mesh></geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

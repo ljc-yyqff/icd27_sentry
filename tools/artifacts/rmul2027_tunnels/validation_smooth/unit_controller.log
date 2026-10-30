@@ -1,0 +1,56 @@
+Running main() from /opt/ros/humble/src/gtest_vendor/src/gtest_main.cc
+[==========] Running 23 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 23 tests from TunnelController
+[ RUN      ] TunnelController.SpeedLimitsAreAbsoluteOrRelativeToConfiguredMaximum
+[WARN] [1793294323.428603274] [OmniPidPursuitController]: Ignoring invalid speed limit
+[       OK ] TunnelController.SpeedLimitsAreAbsoluteOrRelativeToConfiguredMaximum (0 ms)
+[ RUN      ] TunnelController.SparseCenteringPathDoesNotOfferABehindRobotAdaptiveCarrot
+[       OK ] TunnelController.SparseCenteringPathDoesNotOfferABehindRobotAdaptiveCarrot (0 ms)
+[ RUN      ] TunnelController.TunnelSpeedRegulatesFullHorizonBeforeWallWithoutDroppingHeading
+[       OK ] TunnelController.TunnelSpeedRegulatesFullHorizonBeforeWallWithoutDroppingHeading (0 ms)
+[ RUN      ] TunnelController.TunnelSpeedCannotBypassBodyCollisionOrUnsafeRequiredRotation
+[       OK ] TunnelController.TunnelSpeedCannotBypassBodyCollisionOrUnsafeRequiredRotation (0 ms)
+[ RUN      ] TunnelController.HeadingErrorUsesThePhysicalChassisInsteadOfTheVirtualBase
+[       OK ] TunnelController.HeadingErrorUsesThePhysicalChassisInsteadOfTheVirtualBase (0 ms)
+[ RUN      ] TunnelController.DetectsAnObstacleInsideTheFootprintNotJustOnItsOutline
+[       OK ] TunnelController.DetectsAnObstacleInsideTheFootprintNotJustOnItsOutline (0 ms)
+[ RUN      ] TunnelController.UsesThePhysicalChassisOrientation
+[       OK ] TunnelController.UsesThePhysicalChassisOrientation (0 ms)
+[ RUN      ] TunnelController.FindsAnObstacleBetweenSparsePlannerPoses
+[       OK ] TunnelController.FindsAnObstacleBetweenSparsePlannerPoses (1 ms)
+[ RUN      ] TunnelController.FindsAnObstacleDuringRotationBetweenClearEndpointPoses
+[       OK ] TunnelController.FindsAnObstacleDuringRotationBetweenClearEndpointPoses (2 ms)
+[ RUN      ] TunnelController.RejectsOutOfMapAndUnknownSpace
+[       OK ] TunnelController.RejectsOutOfMapAndUnknownSpace (0 ms)
+[ RUN      ] TunnelController.ApproachFootprintAllowsInflationButNeverAnActualWall
+[       OK ] TunnelController.ApproachFootprintAllowsInflationButNeverAnActualWall (6 ms)
+[ RUN      ] TunnelController.ApproachFootprintUsesActualChassisOffsetAndHeldHeading
+[       OK ] TunnelController.ApproachFootprintUsesActualChassisOffsetAndHeldHeading (1 ms)
+[ RUN      ] TunnelController.ApproachDoesNotRotateFootprintWithHolonomicPathDirection
+[       OK ] TunnelController.ApproachDoesNotRotateFootprintWithHolonomicPathDirection (11 ms)
+[ RUN      ] TunnelController.FitsTheTunnelOnlyWhenAligned
+[       OK ] TunnelController.FitsTheTunnelOnlyWhenAligned (31 ms)
+[ RUN      ] TunnelController.AdaptivePursuitPrefersAFullSpeedNearCarrotBeforeCreepingTowardAFarCorner
+[       OK ] TunnelController.AdaptivePursuitPrefersAFullSpeedNearCarrotBeforeCreepingTowardAFarCorner (0 ms)
+[ RUN      ] TunnelController.AdaptivePursuitSlowsBeforeTheEntirePhysicalSweepHitsAWall
+[       OK ] TunnelController.AdaptivePursuitSlowsBeforeTheEntirePhysicalSweepHitsAWall (8 ms)
+[ RUN      ] TunnelController.AdaptivePursuitNeverEscapesUnknownOrAnObstacleAlreadyUnderTheBody
+[       OK ] TunnelController.AdaptivePursuitNeverEscapesUnknownOrAnObstacleAlreadyUnderTheBody (0 ms)
+[ RUN      ] TunnelController.AdaptivePursuitDoesNotInventAHeadingOutsideTheSuppliedPath
+[       OK ] TunnelController.AdaptivePursuitDoesNotInventAHeadingOutsideTheSuppliedPath (0 ms)
+[ RUN      ] TunnelController.AdaptivePursuitRetainsPhysicalAngularCommandAndSpeedLimit
+[       OK ] TunnelController.AdaptivePursuitRetainsPhysicalAngularCommandAndSpeedLimit (0 ms)
+[ RUN      ] TunnelController.AdaptiveCarrotsInterpolateSparsePathsRatherThanJumpingPastTheCorner
+[       OK ] TunnelController.AdaptiveCarrotsInterpolateSparsePathsRatherThanJumpingPastTheCorner (0 ms)
+[ RUN      ] TunnelController.LinearApproachDoesNotMultiplyTheDistanceProportionalPidTwice
+[       OK ] TunnelController.LinearApproachDoesNotMultiplyTheDistanceProportionalPidTwice (0 ms)
+[ RUN      ] TunnelController.LinearApproachPreservesOtherSlowdownAndTheFullConfiguredSpeed
+[       OK ] TunnelController.LinearApproachPreservesOtherSlowdownAndTheFullConfiguredSpeed (0 ms)
+[ RUN      ] TunnelController.LinearApproachFailsClosedForInvalidNumbers
+[       OK ] TunnelController.LinearApproachFailsClosedForInvalidNumbers (0 ms)
+[----------] 23 tests from TunnelController (60 ms total)
+
+[----------] Global test environment tear-down
+[==========] 23 tests from 1 test suite ran. (60 ms total)
+[  PASSED  ] 23 tests.

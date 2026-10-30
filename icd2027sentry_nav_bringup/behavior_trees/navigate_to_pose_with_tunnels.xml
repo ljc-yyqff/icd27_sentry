@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="3" main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <!-- TunnelNavigation controls segmentation, stopping, lift feedback,
+         local-clearance readiness and exit. No generic backup under a roof. -->
+    <TunnelNavigation goal="{goal}" path="{path}"
+                      planning_goal="{planning_goal}"
+                      execution_path="{execution_path}"
+                      controller_id="{execution_controller}"
+                      goal_checker_id="{execution_goal_checker}">
+      <ComputePathToPose goal="{planning_goal}" path="{path}" planner_id="GridBased"/>
+      <FollowPath path="{execution_path}" controller_id="{execution_controller}"
+                  goal_checker_id="{execution_goal_checker}"/>
+    </TunnelNavigation>
+  </BehaviorTree>
+</root>

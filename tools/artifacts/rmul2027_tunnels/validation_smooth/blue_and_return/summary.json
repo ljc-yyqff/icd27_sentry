@@ -1,0 +1,52 @@
+{
+  "passed": false,
+  "reason": "goal failed or timed out: [4.575, -3.475]",
+  "domain_id": 91,
+  "results": [
+    {
+      "goal": [
+        4.575,
+        -3.475
+      ],
+      "status": 6,
+      "elapsed": 12.061447664999832,
+      "final_guard": [
+        3.4557505304680083,
+        -3.4715612933193176,
+        5.681342436111875e-05,
+        0.8847726811936774,
+        0.00033721974262016234,
+        1.0
+      ],
+      "physical_goal_error": 1.1192547519449185
+    }
+  ],
+  "phases": [
+    "planning",
+    "planning_approach:blue_tunnel",
+    "approach_wait_point:blue_tunnel",
+    "stopping_before_tunnel:blue_tunnel",
+    "align_chassis_and_gimbal:blue_tunnel",
+    "lowering:blue_tunnel",
+    "wait_local_clearance:blue_tunnel",
+    "centering_before_entry:blue_tunnel",
+    "crossing:blue_tunnel"
+  ],
+  "violations": [],
+  "max_output_blocked_wall_seconds": 0.05041492400050629,
+  "crossing_speed": {
+    "crossing:blue_tunnel": {
+      "max": 1.8000074736966518,
+      "median": 1.7918653009165209,
+      "samples": 56
+    }
+  },
+  "roof_speed": {
+    "blue_tunnel": {
+      "max": 1.799969746840185,
+      "median": 1.7998985793658513,
+      "samples": 6
+    }
+  },
+  "elapsed": 12.259781464999833
+}

@@ -1,0 +1,9 @@
+<class_libraries>
+    <library path="icd2027sentry_omni_pid_pursuit_controller">
+        <class type="icd2027sentry_omni_pid_pursuit_controller::OmniPidPursuitController" base_class_type="nav2_core::Controller">
+            <description>
+                icd2027sentry_omni_pid_pursuit_controller
+            </description>
+        </class>
+    </library>
+</class_libraries>

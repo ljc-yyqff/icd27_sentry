@@ -1,0 +1,63 @@
+Running main() from /opt/ros/humble/src/gtest_vendor/src/gtest_main.cc
+[==========] Running 27 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 27 tests from TunnelGuard
+[ RUN      ] TunnelGuard.NoCommandNeverCreatesSpin
+[       OK ] TunnelGuard.NoCommandNeverCreatesSpin (0 ms)
+[ RUN      ] TunnelGuard.StopAndLostTraverseHeartbeatOverrideIncomingSpin
+[       OK ] TunnelGuard.StopAndLostTraverseHeartbeatOverrideIncomingSpin (0 ms)
+[ RUN      ] TunnelGuard.AlignmentDiscardsTranslationAndUsesActualHeading
+[       OK ] TunnelGuard.AlignmentDiscardsTranslationAndUsesActualHeading (0 ms)
+[ RUN      ] TunnelGuard.TraversePreservesCommandCoordinatesAndLimitsTheirNorm
+[       OK ] TunnelGuard.TraversePreservesCommandCoordinatesAndLimitsTheirNorm (0 ms)
+[ RUN      ] TunnelGuard.MissingPoseOrLiftFeedbackStopsTraversal
+[       OK ] TunnelGuard.MissingPoseOrLiftFeedbackStopsTraversal (0 ms)
+[ RUN      ] TunnelGuard.LostLocalMapReadinessStopsWithLiftAndPoseStillValid
+[       OK ] TunnelGuard.LostLocalMapReadinessStopsWithLiftAndPoseStillValid (0 ms)
+[ RUN      ] TunnelGuard.LostNavigatorHeartbeatStopsNormalAfterPolicyWasSeen
+[       OK ] TunnelGuard.LostNavigatorHeartbeatStopsNormalAfterPolicyWasSeen (0 ms)
+[ RUN      ] TunnelGuard.ApproachPredictionUsesLimitedSpeedAndStopsBeforeRoof
+[       OK ] TunnelGuard.ApproachPredictionUsesLimitedSpeedAndStopsBeforeRoof (0 ms)
+[ RUN      ] TunnelGuard.NormalCannotResumeSpinInsideRoofAfterRestart
+[       OK ] TunnelGuard.NormalCannotResumeSpinInsideRoofAfterRestart (0 ms)
+[ RUN      ] TunnelGuard.ApproachDisablesSpinAndAlignsBeforeTranslating
+[       OK ] TunnelGuard.ApproachDisablesSpinAndAlignsBeforeTranslating (0 ms)
+[ RUN      ] TunnelGuard.EmptyConfigurationPreservesOrdinaryNavigation
+[       OK ] TunnelGuard.EmptyConfigurationPreservesOrdinaryNavigation (0 ms)
+[ RUN      ] TunnelGuard.FinalSweepChecksAlignmentCreatedFromZeroInput
+[       OK ] TunnelGuard.FinalSweepChecksAlignmentCreatedFromZeroInput (1 ms)
+[ RUN      ] TunnelGuard.FinalSweepChecksApproachYawOverrideNotControllerAngularSpeed
+[       OK ] TunnelGuard.FinalSweepChecksApproachYawOverrideNotControllerAngularSpeed (2 ms)
+[ RUN      ] TunnelGuard.FinalSweepAllowsInflationButRejectsWallsUnknownAndMapEdges
+[       OK ] TunnelGuard.FinalSweepAllowsInflationButRejectsWallsUnknownAndMapEdges (2 ms)
+[ RUN      ] TunnelGuard.FinalSweepUsesActualChassisPositionAndYaw
+[       OK ] TunnelGuard.FinalSweepUsesActualChassisPositionAndYaw (0 ms)
+[ RUN      ] TunnelGuard.CostmapRequiresFreshSourceAndReceiptTimes
+[       OK ] TunnelGuard.CostmapRequiresFreshSourceAndReceiptTimes (0 ms)
+[ RUN      ] TunnelGuard.OrdinarySpinIsSuppressedWhileSafeTranslationContinues
+[       OK ] TunnelGuard.OrdinarySpinIsSuppressedWhileSafeTranslationContinues (0 ms)
+[ RUN      ] TunnelGuard.TunnelAlignmentAndTraversalCannotSilentlyDropTheirHeadingControl
+[       OK ] TunnelGuard.TunnelAlignmentAndTraversalCannotSilentlyDropTheirHeadingControl (0 ms)
+[ RUN      ] TunnelGuard.OrdinaryTranslationSlowsWithinTheSameFullHorizonInsteadOfDeadlocking
+[       OK ] TunnelGuard.OrdinaryTranslationSlowsWithinTheSameFullHorizonInsteadOfDeadlocking (19 ms)
+[ RUN      ] TunnelGuard.TunnelFinalSpeedRegulationPreservesRequiredHeading
+[       OK ] TunnelGuard.TunnelFinalSpeedRegulationPreservesRequiredHeading (0 ms)
+[ RUN      ] TunnelGuard.AdaptiveTranslationNeverAdvancesThroughWallAndRecoversOnChangedPath
+[       OK ] TunnelGuard.AdaptiveTranslationNeverAdvancesThroughWallAndRecoversOnChangedPath (407 ms)
+[ RUN      ] TunnelGuard.AdaptiveTranslationPreservesDirectionAndDoesNotCreateMotion
+[       OK ] TunnelGuard.AdaptiveTranslationPreservesDirectionAndDoesNotCreateMotion (0 ms)
+[ RUN      ] TunnelGuard.AdaptiveTranslationCannotBypassResidualSpinOrNonFiniteFeedback
+[       OK ] TunnelGuard.AdaptiveTranslationCannotBypassResidualSpinOrNonFiniteFeedback (0 ms)
+[ RUN      ] TunnelGuard.CollisionDiagnosticsIdentifyObstacleCellAndFirstPredictionTime
+[       OK ] TunnelGuard.CollisionDiagnosticsIdentifyObstacleCellAndFirstPredictionTime (1 ms)
+[ RUN      ] TunnelGuard.HighGuideApproachesSafeBlueEndpointWithoutRoofPredictionDeadlock
+[       OK ] TunnelGuard.HighGuideApproachesSafeBlueEndpointWithoutRoofPredictionDeadlock (4 ms)
+[ RUN      ] TunnelGuard.HighGuideSafePrefixCannotCrossRoofAfterRepeatedCommands
+[       OK ] TunnelGuard.HighGuideSafePrefixCannotCrossRoofAfterRepeatedCommands (4 ms)
+[ RUN      ] TunnelGuard.HighGuideSafePrefixPreservesHeadingAndNeverCreatesTranslation
+[       OK ] TunnelGuard.HighGuideSafePrefixPreservesHeadingAndNeverCreatesTranslation (0 ms)
+[----------] 27 tests from TunnelGuard (440 ms total)
+
+[----------] Global test environment tear-down
+[==========] 27 tests from 1 test suite ran. (440 ms total)
+[  PASSED  ] 27 tests.

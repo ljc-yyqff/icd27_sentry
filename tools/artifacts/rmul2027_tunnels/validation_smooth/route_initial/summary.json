@@ -1,0 +1,12 @@
+{
+  "passed": false,
+  "reason": "navigation or independent guard/joint feedback not ready",
+  "domain_id": 91,
+  "results": [],
+  "phases": [],
+  "violations": [],
+  "max_output_blocked_wall_seconds": 0.0,
+  "crossing_speed": {},
+  "roof_speed": {},
+  "elapsed": 60.06964209900002
+}

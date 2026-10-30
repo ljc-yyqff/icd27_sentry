@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="rmul_2026">
+    <static>true</static>
+    <link name="body">
+      <visual name="part_0">
+        <geometry><mesh><uri>model://rmul_2026/meshes/visual_parts/part_0.stl</uri></mesh></geometry>
+        <material><ambient>0.00000 0.11765 0.84314 1</ambient><diffuse>0.00000 0.11765 0.84314 1</diffuse></material>
+      </visual>
+      <visual name="part_1">
+        <geometry><mesh><uri>model://rmul_2026/meshes/visual_parts/part_1.stl</uri></mesh></geometry>
+        <material><ambient>0.00000 0.70588 0.00000 1</ambient><diffuse>0.00000 0.70588 0.00000 1</diffuse></material>
+      </visual>
+      <visual name="part_2">
+        <geometry><mesh><uri>model://rmul_2026/meshes/visual_parts/part_2.stl</uri></mesh></geometry>
+        <material><ambient>0.12941 0.14118 0.15686 1</ambient><diffuse>0.12941 0.14118 0.15686 1</diffuse></material>
+      </visual>
+      <visual name="part_3">
+        <geometry><mesh><uri>model://rmul_2026/meshes/visual_parts/part_3.stl</uri></mesh></geometry>
+        <material><ambient>0.49020 0.49020 0.49020 1</ambient><diffuse>0.49020 0.49020 0.49020 1</diffuse></material>
+      </visual>
+      <visual name="part_4">
+        <geometry><mesh><uri>model://rmul_2026/meshes/visual_parts/part_4.stl</uri></mesh></geometry>
+        <material><ambient>0.56863 0.76471 0.86275 1</ambient><diffuse>0.56863 0.76471 0.86275 1</diffuse></material>
+      </visual>
+      <visual name="part_5">
+        <geometry><mesh><uri>model://rmul_2026/meshes/visual_parts/part_5.stl</uri></mesh></geometry>
+        <material><ambient>0.59216 0.63922 0.69804 1</ambient><diffuse>0.59216 0.63922 0.69804 1</diffuse></material>
+      </visual>
+      <visual name="part_6">
+        <geometry><mesh><uri>model://rmul_2026/meshes/visual_parts/part_6.stl</uri></mesh></geometry>
+        <material><ambient>0.72549 0.72549 0.72549 1</ambient><diffuse>0.72549 0.72549 0.72549 1</diffuse></material>
+      </visual>
+      <visual name="part_7">
+        <geometry><mesh><uri>model://rmul_2026/meshes/visual_parts/part_7.stl</uri></mesh></geometry>
+        <material><ambient>0.86275 0.00000 0.00000 1</ambient><diffuse>0.86275 0.00000 0.00000 1</diffuse></material>
+      </visual>
+      <collision name="field_collision">
+        <geometry><mesh><uri>model://rmul_2026/meshes/rmul_2026.stl</uri></mesh></geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

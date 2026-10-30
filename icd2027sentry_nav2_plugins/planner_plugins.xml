@@ -1,0 +1,6 @@
+<library path="icd2027sentry_footprint_grid_planner">
+  <class name="icd2027sentry_nav2_plugins/FootprintGridPlanner"
+    type="icd2027sentry_nav2_plugins::FootprintGridPlanner" base_class_type="nav2_core::GlobalPlanner">
+    <description>Holonomic A* with continuous filled physical footprint collision checking.</description>
+  </class>
+</library>

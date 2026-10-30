@@ -1,0 +1,48 @@
+# Shared by map preparation, costmap clearance filtering and the tunnel BT.
+# All positions are in map, dimensions in metres, and angles in radians.
+frame: map
+normal_height: 0.288
+lowered_height: 0.233
+height_margin: 0.010
+lift_target: 0.055
+lift_tolerance: 0.002
+joint_timeout: 0.5
+lift_timeout: 5.0
+settle_time: 0.25
+pitch_tolerance: 0.08
+# Aligned travel has the same cruise cap as ordinary navigation. Precision
+# centering remains slow; all modes still require the full collision sweep.
+speed: 1.8
+approach_speed: 1.8
+centering_speed: 0.2
+goal_lateral_tolerance: 0.10
+staging_lateral_offset: 0.8
+# Stop and lower before the narrow side-wall approach, not only the roof.
+# Theta*'s point/radius path can drift sideways before the portal; this longer
+# staging distance lets the footprint-checked tunnel follower own that segment.
+wait_offset: 1.9
+exit_offset: 1.9
+# Chassis coordinates, +x forward. This encloses the 0.700712 m wheel
+# assembly visual envelope and every current Gazebo collision with 9.6 mm
+# extra margin on each side. One isolated thin visual part (part_497_0)
+# extends farther and has no corresponding Gazebo collision; this footprint
+# follows the physical collision and wheel envelopes, not that visual part.
+footprint: [[0.36, 0.36], [-0.36, 0.36], [-0.36, -0.36], [0.36, -0.36]]
+tunnels:
+  - id: red_tunnel
+    x_min: -2.675
+    x_max: -2.325
+    y_min: 3.06
+    y_max: 3.86
+    # Geometric centre is 3.46; the 5 cm raster's free centre is 3.475.
+    center_y: 3.475
+    floor_z: 0.0005
+    ceiling_z: 0.25
+  - id: blue_tunnel
+    x_min: 2.325
+    x_max: 2.675
+    y_min: -3.86
+    y_max: -3.06
+    center_y: -3.475
+    floor_z: 0.0005
+    ceiling_z: 0.25

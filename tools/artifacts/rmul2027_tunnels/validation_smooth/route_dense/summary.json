@@ -1,0 +1,156 @@
+{
+  "passed": false,
+  "reason": "goal failed or timed out: [0.425, -3.475]",
+  "domain_id": 91,
+  "results": [
+    {
+      "goal": [
+        -1.52,
+        3.54
+      ],
+      "status": 4,
+      "elapsed": 14.31133597400003,
+      "final_guard": [
+        -1.5063325823647133,
+        3.473529661296273,
+        -7.554627358400228e-05,
+        0.0025890493320308724,
+        7.416998889518216e-05,
+        0.0
+      ],
+      "physical_goal_error": 0.06786091829768844
+    },
+    {
+      "goal": [
+        -0.28,
+        -0.08
+      ],
+      "status": 4,
+      "elapsed": 5.541372558000148,
+      "final_guard": [
+        -0.27200389637517297,
+        0.05507709516307813,
+        0.7455123267281879,
+        0.5336244709524556,
+        3.1231547674193822,
+        0.0
+      ],
+      "physical_goal_error": 0.13531355922772204
+    },
+    {
+      "goal": [
+        0.425,
+        -3.475
+      ],
+      "status": null,
+      "elapsed": 75.00111536999975,
+      "final_guard": [
+        0.42515786196181615,
+        -3.12484924413115,
+        1.2077236011285827e-05,
+        1.585272371913767,
+        -0.00010351362710682515,
+        0.0
+      ],
+      "physical_goal_error": 0.35015079145409045
+    }
+  ],
+  "phases": [
+    "planning",
+    "planning_approach:red_tunnel",
+    "approach_wait_point:red_tunnel",
+    "stopping_before_tunnel:red_tunnel",
+    "align_chassis_and_gimbal:red_tunnel",
+    "lowering:red_tunnel",
+    "wait_local_clearance:red_tunnel",
+    "centering_before_entry:red_tunnel",
+    "crossing:red_tunnel",
+    "raising_after_exit:red_tunnel",
+    "planning",
+    "stopping_to_leave_guide:red_tunnel",
+    "align_chassis_and_gimbal:red_tunnel",
+    "following_axis_aligned_guide:red_tunnel",
+    "planning",
+    "normal_follow",
+    "planning",
+    "planning_approach:blue_tunnel",
+    "approach_wait_point:blue_tunnel",
+    "stopping_before_tunnel:blue_tunnel",
+    "align_chassis_and_gimbal:blue_tunnel",
+    "following_axis_aligned_guide:blue_tunnel",
+    "planning",
+    "planning_approach:blue_tunnel",
+    "approach_wait_point:blue_tunnel",
+    "stopping_before_tunnel:blue_tunnel",
+    "align_chassis_and_gimbal:blue_tunnel",
+    "following_axis_aligned_guide:blue_tunnel",
+    "planning",
+    "planning_approach:blue_tunnel",
+    "approach_wait_point:blue_tunnel",
+    "stopping_before_tunnel:blue_tunnel",
+    "align_chassis_and_gimbal:blue_tunnel",
+    "following_axis_aligned_guide:blue_tunnel",
+    "planning",
+    "planning_approach:blue_tunnel",
+    "approach_wait_point:blue_tunnel",
+    "stopping_before_tunnel:blue_tunnel",
+    "align_chassis_and_gimbal:blue_tunnel",
+    "following_axis_aligned_guide:blue_tunnel",
+    "planning",
+    "planning_approach:blue_tunnel",
+    "approach_wait_point:blue_tunnel",
+    "stopping_before_tunnel:blue_tunnel",
+    "align_chassis_and_gimbal:blue_tunnel",
+    "following_axis_aligned_guide:blue_tunnel",
+    "planning",
+    "planning_approach:blue_tunnel",
+    "approach_wait_point:blue_tunnel",
+    "stopping_before_tunnel:blue_tunnel",
+    "align_chassis_and_gimbal:blue_tunnel",
+    "following_axis_aligned_guide:blue_tunnel",
+    "planning",
+    "planning_approach:blue_tunnel",
+    "approach_wait_point:blue_tunnel",
+    "stopping_before_tunnel:blue_tunnel",
+    "align_chassis_and_gimbal:blue_tunnel",
+    "following_axis_aligned_guide:blue_tunnel",
+    "planning",
+    "planning_approach:blue_tunnel",
+    "approach_wait_point:blue_tunnel",
+    "stopping_before_tunnel:blue_tunnel",
+    "align_chassis_and_gimbal:blue_tunnel",
+    "following_axis_aligned_guide:blue_tunnel",
+    "planning",
+    "planning_approach:blue_tunnel",
+    "approach_wait_point:blue_tunnel",
+    "stopping_before_tunnel:blue_tunnel",
+    "align_chassis_and_gimbal:blue_tunnel",
+    "following_axis_aligned_guide:blue_tunnel",
+    "planning",
+    "planning_approach:blue_tunnel",
+    "approach_wait_point:blue_tunnel",
+    "stopping_before_tunnel:blue_tunnel",
+    "align_chassis_and_gimbal:blue_tunnel",
+    "following_axis_aligned_guide:blue_tunnel",
+    "planning",
+    "planning_approach:blue_tunnel",
+    "approach_wait_point:blue_tunnel"
+  ],
+  "violations": [],
+  "max_output_blocked_wall_seconds": 0.3028572829998666,
+  "crossing_speed": {
+    "crossing:red_tunnel": {
+      "max": 1.799987290175953,
+      "median": 1.7953716618600697,
+      "samples": 62
+    }
+  },
+  "roof_speed": {
+    "red_tunnel": {
+      "max": 1.7999829787148964,
+      "median": 1.7999703066605228,
+      "samples": 5
+    }
+  },
+  "elapsed": 95.14393932600069
+}

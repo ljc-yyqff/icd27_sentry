@@ -1,0 +1,101 @@
+[INFO] [launch]: All log files can be found below /tmp/icd_smooth_sim_logs/2026-10-30-01-25-33-997487-yyqff-MEOW-R16-Pro-178597
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [ign gazebo-1]: process started with pid [178649]
+[INFO] [parameter_bridge-2]: process started with pid [178651]
+[INFO] [create-3]: process started with pid [178653]
+[INFO] [rmua19_robot_base-4]: process started with pid [178656]
+[INFO] [robot_state_publisher-5]: process started with pid [178658]
+[INFO] [parameter_bridge-6]: process started with pid [178660]
+[INFO] [ign-7]: process started with pid [178662]
+[INFO] [parameter_bridge-8]: process started with pid [178664]
+[INFO] [pose_bridge-9]: process started with pid [178666]
+[INFO] [rfid_bridge-10]: process started with pid [178668]
+[INFO] [simple_competition_1v1.py-11]: process started with pid [178670]
+[robot_state_publisher-5] [INFO] [1793294734.496977219] [red_standard_robot1.robot_state_publisher]: got segment armor_0
+[robot_state_publisher-5] [INFO] [1793294734.497082385] [red_standard_robot1.robot_state_publisher]: got segment armor_1
+[robot_state_publisher-5] [INFO] [1793294734.497092213] [red_standard_robot1.robot_state_publisher]: got segment armor_2
+[robot_state_publisher-5] [INFO] [1793294734.497099237] [red_standard_robot1.robot_state_publisher]: got segment armor_3
+[robot_state_publisher-5] [INFO] [1793294734.497105679] [red_standard_robot1.robot_state_publisher]: got segment base_footprint
+[robot_state_publisher-5] [INFO] [1793294734.497112572] [red_standard_robot1.robot_state_publisher]: got segment chassis
+[robot_state_publisher-5] [INFO] [1793294734.497118573] [red_standard_robot1.robot_state_publisher]: got segment front_industrial_camera
+[robot_state_publisher-5] [INFO] [1793294734.497125135] [red_standard_robot1.robot_state_publisher]: got segment front_industrial_camera_optical_frame
+[robot_state_publisher-5] [INFO] [1793294734.497131637] [red_standard_robot1.robot_state_publisher]: got segment front_left_wheel
+[robot_state_publisher-5] [INFO] [1793294734.497137739] [red_standard_robot1.robot_state_publisher]: got segment front_mid360
+[robot_state_publisher-5] [INFO] [1793294734.497143800] [red_standard_robot1.robot_state_publisher]: got segment front_right_wheel
+[robot_state_publisher-5] [INFO] [1793294734.497149631] [red_standard_robot1.robot_state_publisher]: got segment front_rplidar_a2
+[robot_state_publisher-5] [INFO] [1793294734.497155412] [red_standard_robot1.robot_state_publisher]: got segment gimbal_pitch
+[robot_state_publisher-5] [INFO] [1793294734.497161152] [red_standard_robot1.robot_state_publisher]: got segment gimbal_pitch_odom
+[robot_state_publisher-5] [INFO] [1793294734.497167144] [red_standard_robot1.robot_state_publisher]: got segment gimbal_yaw
+[robot_state_publisher-5] [INFO] [1793294734.497173255] [red_standard_robot1.robot_state_publisher]: got segment gimbal_yaw_odom
+[robot_state_publisher-5] [INFO] [1793294734.497179216] [red_standard_robot1.robot_state_publisher]: got segment rear_left_wheel
+[robot_state_publisher-5] [INFO] [1793294734.497185027] [red_standard_robot1.robot_state_publisher]: got segment rear_right_wheel
+[robot_state_publisher-5] [INFO] [1793294734.497191158] [red_standard_robot1.robot_state_publisher]: got segment speed_monitor
+[robot_state_publisher-5] [INFO] [1793294734.497196999] [red_standard_robot1.robot_state_publisher]: got segment wheel_carrier
+[create-3] [INFO] [1793294734.504377412] [ros_gz_sim]: Requesting list of world names.
+[parameter_bridge-8] [INFO] [1793294734.540122824] [referee_system.ros_gz_bridge]: Creating GZ->ROS Bridge: [/referee_system/attack_info (ignition.msgs.StringMsg) -> /referee_system/attack_info (std_msgs/msg/String)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1793294734.541420409] [referee_system.ros_gz_bridge]: Creating GZ->ROS Bridge: [/referee_system/shoot_info (ignition.msgs.StringMsg) -> /referee_system/shoot_info (std_msgs/msg/String)] (Lazy 0)
+[parameter_bridge-2] [INFO] [1793294734.542093818] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/clock (gz.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[ign-7] data: true
+[ign-7] 
+[INFO] [ign-7]: process has finished cleanly [pid 178662]
+[create-3] [INFO] [1793294734.995664190] [ros_gz_sim]: Requested creation of entity.
+[create-3] [INFO] [1793294734.995691311] [ros_gz_sim]: OK creation of entity.
+[INFO] [create-3]: process has finished cleanly [pid 178653]
+[parameter_bridge-6] [INFO] [1793294735.528721573] [red_standard_robot1.ros_gz_bridge]: Creating GZ->ROS Bridge: [/red_standard_robot1/odometry (ignition.msgs.Odometry) -> /red_standard_robot1/chassis_odometry_gt (nav_msgs/msg/Odometry)] (Lazy 0)
+[parameter_bridge-6] [INFO] [1793294735.530340048] [red_standard_robot1.ros_gz_bridge]: Creating GZ->ROS Bridge: [/red_standard_robot1/ground_truth/odometry (ignition.msgs.Odometry) -> /red_standard_robot1/chassis_pose_gt (nav_msgs/msg/Odometry)] (Lazy 0)
+[parameter_bridge-6] [INFO] [1793294735.530679363] [red_standard_robot1.ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/default/model/red_standard_robot1/joint_state (ignition.msgs.Model) -> /red_standard_robot1/joint_states (sensor_msgs/msg/JointState)] (Lazy 0)
+[parameter_bridge-6] [INFO] [1793294735.531559057] [red_standard_robot1.ros_gz_bridge]: Creating ROS->GZ Bridge: [/red_standard_robot1/chassis_lift_cmd (std_msgs/msg/Float64) -> /model/red_standard_robot1/joint/chassis_lift_joint/0/cmd_pos (ignition.msgs.Double)] (Lazy 0)
+[parameter_bridge-6] [INFO] [1793294735.532095029] [red_standard_robot1.ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/default/model/red_standard_robot1/link/front_industrial_camera/sensor/front_industrial_camera/image (ignition.msgs.Image) -> /red_standard_robot1/front_industrial_camera/image (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-6] [INFO] [1793294735.532438050] [red_standard_robot1.ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/default/model/red_standard_robot1/link/front_rplidar_a2/sensor/front_rplidar_a2/scan (ignition.msgs.LaserScan) -> /red_standard_robot1/rplidar_a2/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[parameter_bridge-6] [INFO] [1793294735.532791381] [red_standard_robot1.ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/default/model/red_standard_robot1/link/front_mid360/sensor/front_mid360_lidar/scan/points (ignition.msgs.PointCloudPacked) -> /red_standard_robot1/livox/lidar (sensor_msgs/msg/PointCloud2)] (Lazy 0)
+[parameter_bridge-6] [INFO] [1793294735.533153708] [red_standard_robot1.ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/default/model/red_standard_robot1/link/front_mid360/sensor/front_mid360_imu/imu (ignition.msgs.IMU) -> /red_standard_robot1/livox/imu (sensor_msgs/msg/Imu)] (Lazy 0)
+[parameter_bridge-6] [INFO] [1793294735.533472223] [red_standard_robot1.ros_gz_bridge]: Creating GZ->ROS Bridge: [/world/default/model/red_standard_robot1/link/front_industrial_camera/sensor/front_industrial_camera/camera_info (ignition.msgs.CameraInfo) -> /red_standard_robot1/front_industrial_camera/camera_info (sensor_msgs/msg/CameraInfo)] (Lazy 0)
+[ign gazebo-1] libEGL warning: egl: failed to create dri2 screen
+[ign gazebo-1] libEGL warning: egl: failed to create dri2 screen
+[parameter_bridge-6] [INFO] [1793294836.317721799] [red_standard_robot1.ros_gz_bridge]: Passing message from ROS std_msgs/msg/Float64 to Gazebo gz.msgs.Double (showing msg only once per type)
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[parameter_bridge-8] [INFO] [1793295260.174949290] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [simple_competition_1v1.py-11]: sending signal 'SIGINT' to process[simple_competition_1v1.py-11]
+[INFO] [rfid_bridge-10]: sending signal 'SIGINT' to process[rfid_bridge-10]
+[INFO] [pose_bridge-9]: sending signal 'SIGINT' to process[pose_bridge-9]
+[INFO] [parameter_bridge-8]: sending signal 'SIGINT' to process[parameter_bridge-8]
+[INFO] [parameter_bridge-6]: sending signal 'SIGINT' to process[parameter_bridge-6]
+[INFO] [robot_state_publisher-5]: sending signal 'SIGINT' to process[robot_state_publisher-5]
+[INFO] [rmua19_robot_base-4]: sending signal 'SIGINT' to process[rmua19_robot_base-4]
+[INFO] [parameter_bridge-2]: sending signal 'SIGINT' to process[parameter_bridge-2]
+[INFO] [ign gazebo-1]: sending signal 'SIGINT' to process[ign gazebo-1]
+[pose_bridge-9] [INFO] [1793295260.175126502] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[robot_state_publisher-5] [INFO] [1793295260.175217301] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[simple_competition_1v1.py-11] Traceback (most recent call last):
+[simple_competition_1v1.py-11]   File "/home/yyqff/sentry/icd2027_sentry_nav-main/install/icd2027sentry_gazebo_simulator/lib/icd2027sentry_gazebo_simulator/simple_competition_1v1.py", line 371, in <module>
+[simple_competition_1v1.py-11]     main()
+[simple_competition_1v1.py-11]   File "/home/yyqff/sentry/icd2027_sentry_nav-main/install/icd2027sentry_gazebo_simulator/lib/icd2027sentry_gazebo_simulator/simple_competition_1v1.py", line 364, in main
+[simple_competition_1v1.py-11]     rclpy.spin(node)
+[simple_competition_1v1.py-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+[simple_competition_1v1.py-11]     executor.spin_once()
+[simple_competition_1v1.py-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 808, in spin_once
+[simple_competition_1v1.py-11]     self._spin_once_impl(timeout_sec)
+[simple_competition_1v1.py-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 797, in _spin_once_impl
+[simple_competition_1v1.py-11]     handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+[simple_competition_1v1.py-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 780, in wait_for_ready_callbacks
+[simple_competition_1v1.py-11]     return next(self._cb_iter)
+[simple_competition_1v1.py-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 677, in _wait_for_ready_callbacks
+[simple_competition_1v1.py-11]     wait_set.wait(timeout_nsec)
+[simple_competition_1v1.py-11] KeyboardInterrupt
+[rmua19_robot_base-4] [INFO] [1793295260.175315635] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[parameter_bridge-2] [INFO] [1793295260.175439306] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[parameter_bridge-6] [INFO] [1793295260.175519216] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[rfid_bridge-10] [INFO] [1793295260.177667652] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[parameter_bridge-6] [INFO] [1793295260.186228125] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[robot_state_publisher-5] [INFO] [1793295260.187421776] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[parameter_bridge-2] [INFO] [1793295260.190664137] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[parameter_bridge-8] [INFO] [1793295260.190736823] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[ERROR] [rfid_bridge-10]: process has died [pid 178668, exit code -2, cmd '/home/yyqff/sentry/icd2027_sentry_nav-main/install/rmoss_gz_bridge/lib/rmoss_gz_bridge/rfid_bridge --ros-args -r __ns:=/referee_system'].
+[ERROR] [pose_bridge-9]: process has died [pid 178666, exit code -2, cmd '/home/yyqff/sentry/icd2027_sentry_nav-main/install/rmoss_gz_bridge/lib/rmoss_gz_bridge/pose_bridge --ros-args -r __ns:=/referee_system'].
+[ERROR] [rmua19_robot_base-4]: process has died [pid 178656, exit code -2, cmd '/home/yyqff/sentry/icd2027_sentry_nav-main/install/rmoss_gz_base/lib/rmoss_gz_base/rmua19_robot_base --ros-args -r __ns:=/red_standard_robot1 --params-file /home/yyqff/sentry/icd2027_sentry_nav-main/install/icd2027sentry_gazebo_simulator/share/icd2027sentry_gazebo_simulator/config/base_params.yaml --params-file /tmp/launch_params_rn0121ms'].
+[ERROR] [simple_competition_1v1.py-11]: process has died [pid 178670, exit code -2, cmd '/home/yyqff/sentry/icd2027_sentry_nav-main/install/icd2027sentry_gazebo_simulator/lib/icd2027sentry_gazebo_simulator/simple_competition_1v1.py --ros-args -r __ns:=/referee_system --params-file /home/yyqff/sentry/icd2027_sentry_nav-main/install/icd2027sentry_gazebo_simulator/share/icd2027sentry_gazebo_simulator/config/referee_system_1v1.yaml'].
+[INFO] [parameter_bridge-2]: process has finished cleanly [pid 178651]
+[INFO] [parameter_bridge-6]: process has finished cleanly [pid 178660]
+[INFO] [parameter_bridge-8]: process has finished cleanly [pid 178664]
+[INFO] [robot_state_publisher-5]: process has finished cleanly [pid 178658]
+[ERROR] [ign gazebo-1]: process has died [pid 178649, exit code -2, cmd 'ruby /usr/bin/ign gazebo /home/yyqff/sentry/icd2027_sentry_nav-main/install/icd2027sentry_gazebo_simulator/share/icd2027sentry_gazebo_simulator/resource/worlds/rmul_2027_world.sdf --gui-config /home/yyqff/sentry/icd2027_sentry_nav-main/install/icd2027sentry_gazebo_simulator/share/icd2027sentry_gazebo_simulator/resource/ign/gui.config -s -r --force-version 6'].

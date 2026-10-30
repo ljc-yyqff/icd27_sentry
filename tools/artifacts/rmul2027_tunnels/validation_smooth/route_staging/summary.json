@@ -1,0 +1,39 @@
+{
+  "passed": false,
+  "reason": "goal failed or timed out: [-1.52, 3.54]",
+  "domain_id": 91,
+  "results": [
+    {
+      "goal": [
+        -1.52,
+        3.54
+      ],
+      "status": 6,
+      "elapsed": 16.751436849999664,
+      "final_guard": [
+        -4.573976444245529,
+        2.7306994974021177,
+        3.214823721782173e-06,
+        0.17061562924066973,
+        8.935755049828329e-05,
+        1.0
+      ],
+      "physical_goal_error": 3.159389090554019
+    }
+  ],
+  "phases": [
+    "planning",
+    "planning_approach:red_tunnel",
+    "approach_wait_point:red_tunnel",
+    "stopping_before_tunnel:red_tunnel",
+    "align_chassis_and_gimbal:red_tunnel",
+    "lowering:red_tunnel",
+    "wait_local_clearance:red_tunnel",
+    "centering_before_entry:red_tunnel"
+  ],
+  "violations": [],
+  "max_output_blocked_wall_seconds": 0.20992473800015432,
+  "crossing_speed": {},
+  "roof_speed": {},
+  "elapsed": 17.564051649999783
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="3" main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <!-- User waypoints run in order; internal entry/exit stages are not removed
+         by RemovePassedGoals, and a goal inside a tunnel leaves the robot low. -->
+    <TunnelNavigation goals="{goals}" path="{path}"
+                      planning_goal="{planning_goal}"
+                      execution_path="{execution_path}"
+                      controller_id="{execution_controller}"
+                      goal_checker_id="{execution_goal_checker}">
+      <ComputePathToPose goal="{planning_goal}" path="{path}" planner_id="GridBased"/>
+      <FollowPath path="{execution_path}" controller_id="{execution_controller}"
+                  goal_checker_id="{execution_goal_checker}"/>
+    </TunnelNavigation>
+  </BehaviorTree>
+</root>

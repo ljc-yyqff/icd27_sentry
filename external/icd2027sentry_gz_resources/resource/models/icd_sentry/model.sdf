@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="icd_sentry">
+    <static>true</static>
+    <link name="visual">
+      <visual name="assembly">
+        <pose>0 0 0.076 0 0 0</pose>
+        <geometry>
+          <mesh><uri>model://icd_sentry/meshes/icd_sentry_colored.obj</uri></mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

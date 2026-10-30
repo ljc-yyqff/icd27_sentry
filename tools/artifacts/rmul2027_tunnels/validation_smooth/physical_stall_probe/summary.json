@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "reason": "all route goals succeeded",
+  "domain_id": 91,
+  "results": [
+    {
+      "goal": [
+        -0.28,
+        -0.08
+      ],
+      "status": 4,
+      "elapsed": 2.602016898000329,
+      "final_guard": [
+        -0.2738734421393625,
+        0.053230675835311825,
+        -1.456580247558229,
+        0.5018058713722506,
+        3.1377174390291955,
+        0.0
+      ],
+      "physical_goal_error": 0.13337146506938313
+    },
+    {
+      "goal": [
+        0.425,
+        -3.475
+      ],
+      "status": 4,
+      "elapsed": 14.840953124999942,
+      "final_guard": [
+        0.4250515886735684,
+        -3.4687016034848206,
+        6.07149856559263e-06,
+        0.07859063640062217,
+        8.811038525904165e-05,
+        0.0
+      ],
+      "physical_goal_error": 0.006298607786937185
+    }
+  ],
+  "phases": [
+    "approach_wait_point:blue_tunnel",
+    "planning",
+    "normal_follow",
+    "planning",
+    "planning_approach:blue_tunnel",
+    "approach_wait_point:blue_tunnel",
+    "stopping_before_tunnel:blue_tunnel",
+    "align_chassis_and_gimbal:blue_tunnel",
+    "following_axis_aligned_guide:blue_tunnel"
+  ],
+  "violations": [],
+  "max_output_blocked_wall_seconds": 0.0,
+  "crossing_speed": {},
+  "roof_speed": {},
+  "elapsed": 20.038742507999814
+}

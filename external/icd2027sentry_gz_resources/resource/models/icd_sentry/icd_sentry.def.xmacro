@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+    <!--include defination-->
+    <xmacro_include uri="model://icd_sentry/chassis_wheel.def.xmacro" />
+    <!-- The 3MF mesh contains four sloped armor plates and their blue bars.
+         Keep referee collision links, adding only the number to each face. -->
+    <xmacro_define_block name="icd_armor" params="suffix pose">
+        <joint name="armor${suffix}_joint" type="fixed">
+            <pose relative_to="chassis">${pose}</pose>
+            <parent>chassis</parent>
+            <child>armor${suffix}</child>
+        </joint>
+        <link name="armor${suffix}">
+            <pose relative_to="armor${suffix}_joint">0 0 0 0 0 0</pose>
+            <inertial>
+                <xmacro_block name="inertia_box" m="0.1" x="0.012" y="0.140" z="0.130"/>
+            </inertial>
+            <visual name="number_seven_top">
+                <pose>0.0035 0 0.028 0 0 0</pose>
+                <xmacro_block name="geometry_box" x="0.001" y="0.073" z="0.012"/>
+                <material>
+                    <ambient>1 1 1 1</ambient>
+                    <diffuse>1 1 1 1</diffuse>
+                    <emissive>0.7 0.7 0.7 1</emissive>
+                </material>
+            </visual>
+            <visual name="number_seven_stem">
+                <pose>0.0035 0 -0.008 -0.57 0 0</pose>
+                <xmacro_block name="geometry_box" x="0.001" y="0.014" z="0.078"/>
+                <material>
+                    <ambient>1 1 1 1</ambient>
+                    <diffuse>1 1 1 1</diffuse>
+                    <emissive>0.7 0.7 0.7 1</emissive>
+                </material>
+            </visual>
+            <collision name="collision">
+                <pose>0 0 0.045 0 0 0</pose>
+                <xmacro_block name="geometry_box" x="0.020" y="0.135" z="0.090"/>
+            </collision>
+            <collision name="target_collision">
+                <pose>0.010 0 0.045 0 0 0</pose>
+                <xmacro_block name="geometry_box" x="0.008" y="0.135" z="0.090"/>
+            </collision>
+        </link>
+    </xmacro_define_block>
+    <!-- Colored ICD body and wheel-carrier visuals; simplified simulation
+         joints, inertia, and collisions remain in SDF. -->
+    <xmacro_define_block name="icd_sentry_robot" params="sticker_type chassis_height gimbal_pitch_height gimbal_yaw_height">
+        <link name="base_footprint"/>
+        <joint name="base_to_chassis" type="fixed">
+            <pose>0 0 ${chassis_height} 0 0 0</pose>
+            <parent>base_footprint</parent>
+            <child>chassis</child>
+        </joint>
+        <!--chassis-->
+        <link name="chassis">
+            <inertial>
+                <pose>0 0 0.055 0 0 0</pose>
+                <xmacro_block name="inertia_box" m="15.0" x="0.36" y="0.24" z="0.13"/>
+            </inertial>
+            <visual name="chassis_visual">
+                <xmacro_block name="geometry_mesh" uri="model://icd_sentry/meshes/icd_sentry_body.obj"/>
+            </visual>
+            <collision name="chassis_base_collision">
+                <pose>0 0 0.070 0 0 0</pose>
+                <xmacro_block name="geometry_box" x="0.36" y="0.24" z="0.10"/>
+            </collision>
+            <collision name="chassis_projectile_container_collision">
+                <pose>-0.122 0 0.120 0 0 0</pose>
+                <xmacro_block name="geometry_box" x="0.1" y="0.18" z="0.080"/>
+            </collision>
+            <sensor name="chassis_imu" type="imu">
+                <always_on>1</always_on>
+                <update_rate>200</update_rate>
+            </sensor>
+        </link>
+        <!-- The four wheel assemblies stay on the ground while the central body
+             moves down along their linear guides. Positive joint travel lowers
+             chassis relative to the wheel carrier. -->
+        <joint name="chassis_lift_joint" type="prismatic">
+            <parent>chassis</parent>
+            <child>wheel_carrier</child>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                    <lower>0.0</lower>
+                    <upper>0.055</upper>
+                    <effort>2000</effort>
+                    <velocity>0.20</velocity>
+                </limit>
+                <dynamics>
+                    <damping>80</damping>
+                </dynamics>
+            </axis>
+        </joint>
+        <link name="wheel_carrier">
+            <inertial>
+                <xmacro_block name="inertia_box" m="2.0" x="0.42" y="0.42" z="0.06"/>
+            </inertial>
+            <visual name="wheel_assemblies_visual">
+                <xmacro_block name="geometry_mesh" uri="model://icd_sentry/meshes/icd_sentry_wheels.obj"/>
+            </visual>
+            <collision name="front_wheel_holder_collision">
+                <pose>0.208 0 0 0 0 0</pose>
+                <xmacro_block name="geometry_box" x="0.055" y="0.367" z="0.055"/>
+            </collision>
+            <collision name="rear_wheel_holder_collision">
+                <pose>-0.208 0 0 0 0 0</pose>
+                <xmacro_block name="geometry_box" x="0.055" y="0.367" z="0.055"/>
+            </collision>
+        </link>
+        <!--front_left wheel link and joint-->
+        <xmacro_block name="chassis_wheel_l" prefix="front_left" parent="wheel_carrier" pose="0.207 0.194 0 0 0 0"/>
+        <!--front_right wheel link and joint-->
+        <xmacro_block name="chassis_wheel_r" prefix="front_right" parent="wheel_carrier" pose="0.207 -0.194 0 0 0 0"/>
+        <!--rear_left wheel link and joint-->
+        <xmacro_block name="chassis_wheel_r" prefix="rear_left" parent="wheel_carrier" pose="-0.207 0.194 0 0 0 0"/>
+        <!--rear_right wheel link and joint-->
+        <xmacro_block name="chassis_wheel_l" prefix="rear_right" parent="wheel_carrier" pose="-0.207 -0.194 0 0 0 0"/>
+
+        <joint name="gimbal_yaw_odom_joint" type="revolute">
+            <pose relative_to='chassis'>0 0 ${gimbal_yaw_height} 0 0 0</pose>
+            <parent>chassis</parent>
+            <child>gimbal_yaw_odom</child>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                    <effort>100</effort>
+                    <velocity>50</velocity>
+                    <lower>-1.79769e+308</lower>
+                    <upper>1.79769e+308</upper>
+                </limit>
+            </axis>
+        </joint>
+        <link name="gimbal_yaw_odom">
+            <pose relative_to="gimbal_yaw_odom_joint">0 0 0 0 0 0</pose>
+        </link>
+
+        <joint name="gimbal_pitch_odom_joint" type="fixed">
+            <pose relative_to='gimbal_yaw_odom'>0 0 ${gimbal_pitch_height} 0 0 0</pose>
+            <parent>gimbal_yaw_odom</parent>
+            <child>gimbal_pitch_odom</child>
+            <axis>
+                <xyz>0 1 0</xyz>
+                <limit>
+                    <effort>100</effort>
+                    <velocity>50</velocity>
+                    <lower>${-3.14*0.25}</lower>
+                    <upper>${3.14*0.18}</upper>
+                </limit>
+            </axis>
+        </joint>
+        <link name="gimbal_pitch_odom">
+            <pose relative_to="gimbal_pitch_odom_joint">0 0 0 0 0 0</pose>
+        </link>
+
+        <!--gimbal yaw module-->
+        <joint name="gimbal_yaw_joint" type="revolute">
+            <pose relative_to='gimbal_pitch_odom'>0 0 -${gimbal_pitch_height} 0 0 0</pose>
+            <parent>gimbal_pitch_odom</parent>
+            <child>gimbal_yaw</child>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                    <effort>100</effort>
+                    <velocity>50</velocity>
+                    <lower>-1.79769e+308</lower>
+                    <upper>1.79769e+308</upper>
+                </limit>
+            </axis>
+        </joint>
+        <link name="gimbal_yaw">
+            <pose relative_to="gimbal_yaw_joint">0 0 0 0 0 0</pose>
+            <inertial>
+                <pose>0 0 0.06 0 0 0</pose>
+                <xmacro_block name="inertia_cylinder" m="1.0" r="0.05" l="0.17"/>
+            </inertial>
+            <collision name="collision">
+                <pose>0 0 0.040 0 0 0</pose>
+                <xmacro_block name="geometry_box" x="0.065" y="0.117" z="0.080"/>
+            </collision>
+        </link>
+        <!--gimbal pitch module-->
+        <joint name="gimbal_pitch_joint" type="revolute">
+            <pose relative_to='gimbal_yaw'>0 0 ${gimbal_pitch_height} 0 0 0</pose>
+            <parent>gimbal_yaw</parent>
+            <child>gimbal_pitch</child>
+            <axis>
+                <xyz>0 1 0</xyz>
+                <limit>
+                    <effort>100</effort>
+                    <lower>${-3.14*0.25}</lower>
+                    <upper>${3.14*0.18}</upper>
+                    <velocity>50</velocity>
+                </limit>
+            </axis>
+        </joint>
+        <link name="gimbal_pitch">
+            <pose relative_to="gimbal_pitch_joint">0 0 0 0 0 0</pose>
+            <inertial>
+                <pose>0.02 0 0 0 0 0</pose>
+                <xmacro_block name="inertia_box" m="0.5" x="0.25" y="0.09" z="0.10" />
+            </inertial>
+            <collision name="collision_main">
+                <pose>0.015 0 0 0 0 0</pose>
+                <xmacro_block name="geometry_box" x="0.1" y="0.0915" z="0.060"/>
+            </collision>
+            <collision name="collision_box">
+                <pose>-0.011 0 0.020 0 0 0</pose>
+                <xmacro_block name="geometry_box" x="0.14801" y="0.07" z="0.040"/>
+            </collision>
+            <sensor name="gimbal_imu" type="imu">
+                <always_on>1</always_on>
+                <update_rate>200</update_rate>
+            </sensor>
+        </link>
+        <!-- Face measured from the 3MF: outward distance is 0.2766 m at
+             z=0, sloping inward by 0.268 m per metre of height. -->
+        <xmacro_block name="icd_armor" suffix="_0" pose="0.274 0 0.010 0 -0.262 0"/>
+        <xmacro_block name="icd_armor" suffix="_1" pose="0 0.274 0.010 0 -0.262 1.5708"/>
+        <xmacro_block name="icd_armor" suffix="_2" pose="-0.274 0 0.010 0 -0.262 3.14159"/>
+        <xmacro_block name="icd_armor" suffix="_3" pose="0 -0.274 0.010 0 -0.262 -1.5708"/>
+        <!-- Shooter plugin needs this link; its extra render mesh made the
+             speed-monitor light bar appear suspended above the ICD model. -->
+        <joint name="speed_monitor_joint" type="fixed">
+            <pose relative_to="gimbal_pitch">0.07 0 0 0 0 0</pose>
+            <parent>gimbal_pitch</parent>
+            <child>speed_monitor</child>
+        </joint>
+        <link name="speed_monitor">
+            <pose relative_to="speed_monitor_joint">0 0 0 0 0 0</pose>
+            <inertial>
+                <pose>0.055 0 0 0 0 0</pose>
+                <xmacro_block name="inertia_box" m="0.1" x="0.11" y="0.043" z="0.041"/>
+            </inertial>
+        </link>
+    </xmacro_define_block>
+</sdf>
