@@ -1,233 +1,159 @@
-> 本目录为 ICD 2027 哨兵工作空间。当前包名和启动命令见 [ICD_LAUNCH.md](ICD_LAUNCH.md)；以下保留原项目说明与来源信息。
+# ICD 2027 哨兵仿真启动
 
-# pb2025_sentry_nav
+两个终端都从新的 Bash 会话开始，只加载本工作空间。无需设置 `ROS_DOMAIN_ID`。
+本次更新包含 Gazebo 物理插件和三维真值桥接，需退出旧 Gazebo、导航和 RViz 后重新启动两套 launch。
+当前工作空间已编译；仅重新发送 Nav2 Goal 不会让旧进程加载更新。
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Build and Test](https://github.com/SMBU-PolarBear-Robotics-Team/pb2025_sentry_nav/actions/workflows/build_and_test.yml/badge.svg)](https://github.com/SMBU-PolarBear-Robotics-Team/pb2025_sentry_nav/actions/workflows/build_and_test.yml)
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
-
-深圳北理莫斯科大学 北极熊战队 2025 赛季哨兵导航仿真/实车包
-
-![PolarBear Logo](https://raw.githubusercontent.com/SMBU-PolarBear-Robotics-Team/.github/main/.docs/image/polarbear_logo_text.png)
-
-[BiliBili: 谁说在家不能调车！？更适合新手宝宝的 RM 导航仿真](https://www.bilibili.com/video/BV12qcXeHETR)
-
-https://github.com/user-attachments/assets/d9e778e0-fa43-40c2-96c2-e71eaf7737d4
-
-https://github.com/user-attachments/assets/ae4c19a0-4c73-46a0-95bd-909734da2a42
-
-## 1. Overview
-
-本项目基于 [NAV2 导航框架](https://github.com/ros-navigation/navigation2) 并参考学习了 [autonomous_exploration_development_environment](https://github.com/HongbiaoZ/autonomous_exploration_development_environment/tree/humble) 的设计。
-
-- 关于坐标变换：
-
-    本项目大幅优化了坐标变换逻辑，考虑雷达原点 `lidar_odom` 与 底盘原点 `odom` 之间的隐式变换。
-
-    mid360 倾斜侧放在底盘上，使用 [point_lio](https://github.com/SMBU-PolarBear-Robotics-Team/point_lio/tree/RM2025_SMBU_auto_sentry) 里程计，[small_gicp](https://github.com/SMBU-PolarBear-Robotics-Team/small_gicp_relocalization) 重定位，[loam_interface](./loam_interface/) 会将 point_lio 输出的 `/cloud_registered` 从 `lidar_odom` 系转换到 `odom` 系，[sensor_scan_generation](./sensor_scan_generation/) 将 `odom` 系的点云转换到 `front_mid360` 系，并发布变换 `odom -> chassis`。
-
-    ![frames_2025_03_26](https://raw.githubusercontent.com/LihanChen2004/picx-images-hosting/master/frames_2025_03_26.67xmq3djvx.webp)
-
-- 关于路径规划：
-
-    使用 NAV2 默认的 Global Planner 作为全局路径规划器，pb_omni_pid_pursuit_controller 作为路径跟踪器。
-
-- namespace：
-
-    为了后续拓展多机器人，本项目引入 namespace 的设计，与 ROS 相关的 node, topic, action 等都加入了 namespace 前缀。如需查看 tf tree，请使用命令 `ros2 run rqt_tf_tree rqt_tf_tree --ros-args -r /tf:=tf -r /tf_static:=tf_static -r  __ns:=/red_standard_robot1`
-
-- LiDAR:
-
-    Livox mid360 倾斜侧放在底盘上。
-
-    注：仿真环境中，实际上 point pattern 为 velodyne 样式的机械式扫描。此外，由于仿真器中输出的 PointCloud 缺少部分 field，导致 point_lio 无法正常估计状态，故仿真器输出的点云经过 [ign_sim_pointcloud_tool](./ign_sim_pointcloud_tool/) 处理添加 `time` field。
-
-- 文件结构
-
-    ```plaintext
-    .
-    ├── fake_vel_transform                  # 虚拟速度参考坐标系，以应对云台扫描模式自旋，详见子仓库 README
-    ├── ign_sim_pointcloud_tool             # 仿真器点云处理工具
-    ├── livox_ros_driver2                   # Livox 驱动
-    ├── loam_interface                      # point_lio 等里程计算法接口
-    ├── pb_teleop_twist_joy                 # 手柄控制
-    ├── pb2025_nav_bringup                  # 启动文件
-    ├── pb2025_sentry_nav                   # 本仓库功能包描述文件
-    ├── pb_omni_pid_pursuit_controller      # 路径跟踪控制器
-    ├── point_lio                           # 里程计
-    ├── pointcloud_to_laserscan             # 将 terrain_map 转换为 laserScan 类型以表示障碍物（仅 SLAM 模式启动）
-    ├── sensor_scan_generation              # 点云相关坐标变换
-    ├── small_gicp_relocalization           # 重定位
-    ├── terrain_analysis                    # 距车体 4m 范围内地形分析，将障碍物离地高度写入 PointCloud intensity
-    └── terrain_analysis_ext                # 车体 4m 范围外地形分析，将障碍物离地高度写入 PointCloud intensity
-    ```
-
-## 2. Quick Start
-
-### 2.1 Option 1: Docker
-
-#### 2.1.1 Setup Environment
-
-- [Docker](https://docs.docker.com/engine/install/)
-
-- 允许 Docker Container 访问宿主机 X11 显示
-
-    ```bash
-    xhost +local:docker
-    ```
-
-#### 2.1.2 Create Container
+终端 1，启动 Gazebo（地图由 `external/icd2027sentry_gazebo_simulator/icd2027sentry_gazebo_simulator/config/gz_world.yaml` 选择，当前为 `rmul_2027`）：
 
 ```bash
-docker run -it --rm --name pb2025_sentry_nav \
-  --network host \
-  -e "DISPLAY=$DISPLAY" \
-  -v /tmp/.X11-unix:/tmp/.X11-unix \
-  -v /dev:/dev \
-  ghcr.io/smbu-polarbear-robotics-team/pb2025_sentry_nav:1.3.2
+cd /home/yyqff/sentry/icd2027_sentry_nav-main
+source /opt/ros/humble/setup.bash
+source install/setup.bash
+ros2 launch icd2027sentry_gazebo_simulator icd2027sentry_bringup_sim.launch.py gz_args:=-r
 ```
 
-### 2.2 Option 2: Build From Source
-
-#### 2.2.1 Setup Environment
-
-- Ubuntu 22.04
-- ROS: [Humble](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
-- 配套仿真包（Option）：[rmu_gazebo_simulator](https://github.com/SMBU-PolarBear-Robotics-Team/rmu_gazebo_simulator)
-- Install [small_icp](https://github.com/koide3/small_gicp):
-
-    ```bash
-    sudo apt install -y libeigen3-dev libomp-dev
-
-    git clone https://github.com/koide3/small_gicp.git
-    cd small_gicp
-    mkdir build && cd build
-    cmake .. -DCMAKE_BUILD_TYPE=Release && make -j
-    sudo make install
-    ```
-
-#### 2.2.2 Create Workspace
+终端 2，启动导航和 RViz：
 
 ```bash
-mkdir -p ~/ros_ws
-cd ~/ros_ws
+cd /home/yyqff/sentry/icd2027_sentry_nav-main
+source /opt/ros/humble/setup.bash
+source install/setup.bash
+ros2 launch icd2027sentry_nav_bringup icd2027sentry_navigation_simulation.launch.py world:=rmul_2027 slam:=False
 ```
+
+## RMUL2027 自动过洞与定位来源
+
+`world:=rmul_2027` 默认启用隧道行为树。RViz 的 `Nav2 Goal` 路径需要经过隧道时，
+行为树负责洞外停车、关闭自旋并对齐、压低并等待反馈、必要时慢速居中，再沿通道穿洞，
+完整车体离洞后恢复。停车、对齐和实际关节反馈确认仍是强制步骤，不会为提速跳过。
+洞内取消导航时保持压低停车，不会自动抬升。静态地图开放的是经过三维几何检查的
+通道及入口；侧墙和实时发现的低处障碍仍然参与避障。
+
+RMUL2027 全局规划使用 `FootprintGridPlanner`：在整车物理碰撞包络的配置空间中执行 A*，
+检查填充的车体区域和相邻路段扫掠，不再只用中心点或内切圆决定能否通过拐角。
+普通跟随遇到拐角时会尝试更近的插值前瞻点和更低速度，并逐一检查实际运动的完整车体扫掠；
+没有安全候选命令时仍停车，而不是放宽障碍阈值。
+
+停车对齐区距顶板入口 `1.9 m`，并向场内横向偏移 `0.8 m`，避免在贴边界墙的窄通道里转身。
+到开阔等待点前保持普通运动模式并允许重规划；自旋仍受完整车体守卫约束，
+不在离隧道数米处提前锁住某一航向。到达等待点后才执行强制停车与轴向对齐。
+对齐后先横移到中心线、再轴向进入；出洞控制也覆盖两侧窄引导段，不只覆盖顶板的 `0.35 m` 长度。
+处于已居中、已对齐的引导段时，新目标可原地停车压低再通行，无需绕回外侧等待点。
+顶板外的狭窄引导段允许高姿态车体沿通道轴线进出，但不在夹墙区域重新开启普通自旋；
+若需改变航向，先安全离开引导段。目标横向偏离通道中心线不超过 `0.10 m` 时，
+可投影到中心线执行，以避免末端横移碰墙；这仍在普通导航 `0.15 m` 的位置容差内。
+若目标位于顶板下则保持低姿结束，完整车体已离开顶板才允许恢复高度。
+隧道接近和穿越的末端采用线性减速，避免与距离 PID 叠加造成二次减速、长时间挪动。
+普通及居中跟随先补密稀疏路径，防止近前瞻点落到身后的旧起点而反复前后运动。
+
+最终速度守卫对**实际输出**（含行为树对齐和普通自旋）做完整车体扫掠检查：
+普通导航仅在去除自旋后仍可安全平移时放行，且等待实际停转。
+接近和穿洞控制在预测会越过目标点撞到远处边界时，只降低平移速度，保持必要的航向控制；
+控制器与最终守卫均重新验证完整一秒的扫掠。没有安全速度、当前车体已碰撞或必要转动不安全时仍整车停车。
+普通导航、隧道接近和轴向穿越共用 `1.8 m/s` 的速度上限，精细居中限制为 `0.2 m/s`；
+实际速度还受剩余距离、障碍和反馈状态限制，并非全程以最高速度行驶。
+RMUL2027 局部地图扩展为 `7×7 m`，为完整车体的一秒运动扫掠保留空间；
+提速不缩短碰撞检查时域，也不缩小机器人碰撞包络。
+局部地图、实际姿态或必要关节反馈过期时不会盲行。
+穿洞中的升降、云台反馈或局部净空数据短暂失效时，行为树取消当前跟随并保持低姿停车；有效数据连续稳定恢复后
+从当前位置重建并跟随剩余安全路段。持续失效超过 `5 s` 则任务失败，仍保持低姿；这不会放宽障碍判定。
+
+当前 RMUL2027 默认 `use_sim_ground_truth:=True`，使用 Gazebo 真值作为一致的仿真定位源：
+
+- `chassis_pose_gt` 提供物理 `WorldPose` 的完整三维位置与姿态。扣除已知出生坐标及
+  URDF 的固定底盘安装偏移，生成唯一的 `odom → base_footprint` TF；
+  `map → odom` 再补回出生坐标。升降位移只计算一次，不以关节行程替代真实高度。
+  旧的平面 `chassis_odometry_gt` 接口保留，其他场地的原有链路不切换到三维真值模式。
+  对外 TF 和导航里程计限制为 `50 Hz`，保留完整真值历史用于扫描时刻插值，避免千赫兹仿真
+  里程计占满导航回调队列。
+- 使用同一时刻的机器人关节 TF，生成以真实 `gimbal_yaw` 为子坐标系的 `odometry`。
+- 同时发布以真实 `front_mid360`（含安装姿态）为子坐标系的 `lidar_odometry`，供两个地形
+  分析节点滚动其局部窗口；它与导航虚拟底盘位姿不是同一消息。
+- 原始 `livox/lidar` 按点云时间和雷达外参变换成 `registered_scan`，供地形分析和代价地图使用；
+  `sensor_scan` 保留为雷达坐标系下的显示点云。
+- 两路点云均先在同一时刻的真实 `chassis` 坐标系中过滤车体与轮组自身回波，避免自车
+  四角落在圆形清除区域外，被地形分析累积成“障碍物”；车体包络外的环境障碍不受影响。
+- 此模式关闭 Point-LIO、loam_interface、sensor_scan_generation 及雷达格式转换节点，避免重复的
+  TF、里程计或点云发布源。`use_composition:=True/False` 都遵守这一选择。
+
+这个真值模式用于当前 CAD 场地的仿真导航。它保留加速、自旋和升降时的真实车体高度、
+横滚和俯仰，避免把运动中的地面点投影成临时障碍；并未单独验收坡地、台阶等场景的完整通行。
+雷达 GPU 传感器在 `front_mid360` 链接内部的额外 `0.03 m` 偏移也纳入点云变换。
+所有变换使用消息时间；没有对应时间的 TF 或真值时会丢弃该帧并告警，不以最新 TF 代替。
+这项选择不用于实车定位精度验证；其他场地和实车启动仍沿用原有 LIO 链路。
+
+可观察以下话题（默认机器人命名空间 `/red_standard_robot1`）：
+
+| 话题 | 内容 |
+|---|---|
+| `tunnel_navigation_state` | 行为树阶段及隧道名称 |
+| `tunnel_policy` | `[模式, 目标偏航, 速度限制]`，模式 0 正常、1 停车、2 对齐、3 穿洞 |
+| `tunnel_guard_state` | `[map_x, map_y, chassis_yaw, 实际线速度, 实际角速度, 压低就绪]` |
+| `tunnel_local_clearance_ready` | 实际车高满足净空，且局部点云代价地图已更新 |
+| `joint_states` | 包含升降和云台关节的实际位置 |
+| `chassis_lift_cmd` | 底盘升降目标位置 |
+
+离线复核地图和真值点云变换：
 
 ```bash
-git clone --recursive https://github.com/SMBU-PolarBear-Robotics-Team/pb2025_sentry_nav.git src/pb2025_sentry_nav
+python3 tools/prepare_rmul2027_tunnels.py --check
+python3 tools/test_prepare_rmul2027_tunnels.py
+python3 tools/test_gazebo_ground_truth.py
+python3 tools/test_tunnel_navigation_observer.py
 ```
 
-下载先验点云:
-
-先验点云用于 point_lio 和 small_gicp，由于点云文件体积较大，故不存储在 git 中，请前往 [FlowUs](https://flowus.cn/lihanchen/share/87f81771-fc0c-4e09-a768-db01f4c136f4?code=4PP1RS) 下载。
-
-> 当前 point_lio with prior_pcd 在大场景的效果并不好，比不带先验点云更容易飘，待 Debug 优化
-
-#### 2.2.3 Build
+地图处理依赖 NumPy、Pillow 和 PyYAML；真值几何测试需要先加载上述 ROS 环境。
+地图修改前后及通道中心线可查看 `tools/artifacts/rmul2027_tunnels/tunnel_review.png`。
+在专用 `ROS_DOMAIN_ID=91` 仿真和导航启动后，可以执行
+`python3 tools/test_tunnel_navigation.py --timeout 180` 记录完整自动穿洞结果；
+增加 `--cancel-in-tunnel` 测试洞内取消。该工具只发送及取消自身的导航目标，不启动或重置仿真。
+从洞内取消状态继续测试时，使用 `--resume-inside`，工具会要求初始位置确实在顶板下且已压低。
+普通导航、拐角及两侧隧道之间的连续目标切换可用以下工具记录：
 
 ```bash
-rosdep install -r --from-paths src --ignore-src --rosdistro $ROS_DISTRO -y
+python3 tools/test_navigation_route.py --domain-id 91
 ```
+
+该工具仅用于单独启动的 `ROS_DOMAIN_ID=91` 隔离仿真；只发送或取消自身的导航目标，
+不重置 Gazebo、不清空代价地图、不改参数，也不直接发送升降或速度指令。
+输出包含目标结果、实际穿洞速度和命令被安全守卫拦截的时间，可用于复核连续导航表现。
+本次默认出生点七目标连续通行、两侧高速取消/恢复及 127 项回归记录见
+[`validation_smooth/README.md`](tools/artifacts/rmul2027_tunnels/validation_smooth/README.md)。
+历史 `validation/` 中的 `0.2 m/s`、74 项回归及八个穿洞用例属于此前低速基线。
+
+## 底盘升降
+
+ICD 轮组通过 `chassis_lift_joint` 与中间车体连接。`0.0 m` 为正常高度，
+`0.055 m` 为车体完全压低。压低后最高碰撞点约为 `0.233 m`，低于
+`rmul_2027` 隧道约 `0.250 m` 的净空。自动导航使用行为树控制；手动调试接口仍有效，
+可在停车时执行以下指令压低：
 
 ```bash
-colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+ros2 topic pub --once /red_standard_robot1/chassis_lift_cmd std_msgs/msg/Float64 "{data: 0.055}"
 ```
 
-> [!NOTE]
-> 推荐使用 --symlink-install 选项来构建你的工作空间，因为 pb2025_sentry_nav 广泛使用了 launch.py 文件和 YAML 文件。这个构建参数会为那些非编译的源文件使用符号链接，这意味着当你调整参数文件时，不需要反复重建，只需要重新启动即可。
-
-### 2.3 Running
-
-可使用以下命令启动，在 RViz 中使用 `Nav2 Goal` 插件发布目标点。
-
-#### 2.3.1 仿真
-
-单机器人：
-
-导航模式：
+离开隧道后恢复：
 
 ```bash
-ros2 launch icd2027sentry_nav_bringup icd2027sentry_navigation_simulation.launch.py \
-world:=rmul_2027 \
-slam:=False
+ros2 topic pub --once /red_standard_robot1/chassis_lift_cmd std_msgs/msg/Float64 "{data: 0.0}"
 ```
 
-建图模式：
+北极熊工作空间使用独立终端。两套仿真仍使用相同的机器人 ROS 命名空间与部分话题；不要同时启动。
 
-```bash
-ros2 launch icd2027sentry_nav_bringup icd2027sentry_navigation_simulation.launch.py \
-slam:=True
-```
+## ICD 外观模型
 
-保存栅格地图：`ros2 run nav2_map_server map_saver_cli -f <YOUR_MAP_NAME>  --ros-args -r __ns:=/red_standard_robot1`
+Gazebo 使用 `icd_sentry_body.obj` 和 `icd_sentry_wheels.obj` 两组显示网格，二者由
+`icd2027sentry_model/装配体2_彩色.3MF` 转换而来。车体网格连接 `chassis`，轮组网格连接
+`wheel_carrier`，因此升降时中央车体会相对轮组运动。OBJ、MTL 和贴图需放在同一目录；
+重新导出装配体后可分别用 `tools/convert_icd_colored_3mf.py --part-set body` 和
+`--part-set wheels` 重新生成。
 
-多机器人 (实验性功能) :
+车轮滚动、转向效果以及云台运动仍由独立的仿真关节和简化碰撞体负责；CAD 网格只用于显示。
+装甲板数字 7 是贴在原装甲板外表面的仿真几何体。
 
-当前指定的初始位姿实际上是无效的。TODO: 加入 `map` -> `odom` 的变换和初始化
-
-```bash
-ros2 launch pb2025_nav_bringup rm_multi_navigation_simulation_launch.py \
-world:=rmul_2024 \
-robots:=" \
-red_standard_robot1={x: 0.0, y: 0.0, yaw: 0.0}; \
-blue_standard_robot1={x: 5.6, y: 1.4, yaw: 3.14}; \
-"
-```
-
-#### 2.3.2 实车
-
-建图模式：
-
-```bash
-ros2 launch pb2025_nav_bringup rm_navigation_reality_launch.py \
-slam:=True \
-use_robot_state_pub:=True
-```
-
-保存栅格地图：`ros2 run nav2_map_server map_saver_cli -f <YOUR_MAP_NAME>  --ros-args -r __ns:=/red_standard_robot1`
-
-导航模式：
-
-注意修改 `world` 参数为实际地图的名称
-
-```bash
-ros2 launch pb2025_nav_bringup rm_navigation_reality_launch.py \
-world:=<YOUR_WORLD_NAME> \
-slam:=False \
-use_robot_state_pub:=True
-```
-
-### 2.4 Launch Arguments
-
-启动参数在仿真和实车中大部分是通用的。以下是所有启动参数表格的图例。
-
-| 符号 | 含义                       |
-| ---- | -------------------------- |
-| 🤖    | 适用于实车           |
-| 🖥️    | 适用于仿真                 |
-
-| 可用性 | 参数 | 描述 | 类型  | 默认值 |
-|-|-|-|-|-|
-| 🤖 🖥️ | `namespace` | 顶级命名空间 | string | "red_standard_robot1" |
-| 🤖🖥️ | `use_sim_time` | 如果为 True，则使用仿真（Gazebo）时钟 | bool | 仿真: True; 实车: False |
-| 🤖 🖥️ | `slam` | 是否启用建图模式。如果为 True，则禁用 small_gicp 并发送静态 tf（map->odom）。然后自动保存 pcd 文件到 [./point_lio/PCD/](./point_lio/PCD/)| bool | False |
-| 🤖 🖥️ | `world` | 在仿真模式，可用选项为 `rmul_2024` 或 `rmuc_2024` 或 `rmul_2025` 或 `rmuc_2025` | string | "rmuc_2025" |
-|  |  | 在实车模式，`world` 参数名称与栅格地图和先验点云图的文件名称相同 | string | "" |
-| 🤖 🖥️ | `map` | 要加载的地图文件的完整路径。默认路径自动基于 `world` 参数构建 | string | 仿真: [rmuc_2025.yaml](./pb2025_nav_bringup/map/simulation/rmuc_2025.yaml); 实车: 自动填充 |
-| 🤖 🖥️ | `prior_pcd_file` | 要加载的先验 pcd 文件的完整路径。默认路径自动基于 `world` 参数构建 | string | 仿真: [rmuc_2025.pcd](./pb2025_nav_bringup//pcd/reality/); 实车: 自动填充 |
-| 🤖 🖥️ | `params_file` | 用于所有启动节点的 ROS2 参数文件的完整路径 | string | 仿真: [nav2_params.yaml](./pb2025_nav_bringup/config/simulation/nav2_params.yaml); 实车: [nav2_params.yaml](./pb2025_nav_bringup/config/reality/nav2_params.yaml) |
-| 🤖🖥️ | `rviz_config_file` | 要使用的 RViz 配置文件的完整路径 | string | [nav2_default_view.rviz](./pb2025_nav_bringup/rviz/nav2_default_view.rviz) |
-| 🤖 🖥️ | `autostart` | 自动启动 nav2 栈 | bool | True |
-| 🤖 🖥️ | `use_composition` | 是否使用 Composable Node 形式启动 | bool | True |
-| 🤖 🖥️ | `use_respawn` | 如果节点崩溃，是否重新启动。本参数仅 `use_composition:=False` 时有效 | bool | False |
-| 🤖🖥️ | `use_rviz` | 是否启动 RViz | bool | True |
-| 🤖 | `use_robot_state_pub` | 是 是否使用 `robot_state_publisher` 发布机器人的 TF 信息 <br> 1. 在仿真中，由于支持的 Gazebo 仿真器已经发布了机器人的 TF 信息，因此不需要再次发布。 <br> 2. 在实车中，**推荐**使用独立的包发布机器人的 TF 信息。例如，`gimbal_yaw` 和 `gimbal_pitch` 关节位姿由串口模块 [standard_robot_pp_ros2](https://github.com/SMBU-PolarBear-Robotics-Team/standard_robot_pp_ros2) 提供，此时应将 `use_robot_state_pub` 设置为 False。 <br> 如果没有完整的机器人系统或仅测试导航模块（此仓库）时，可将 `use_robot_state_pub` 设置为 True。此时，导航模块将发布静态的机器人关节位姿数据以维护 TF 树。 <br> *注意：需额外克隆并编译 [pb2025_robot_description](https://github.com/SMBU-PolarBear-Robotics-Team/pb2025_robot_description.git)* | bool | False |
-
-> [!TIP]
-> 关于本项目更多细节与实车部署指南，请前往 [Wiki](https://github.com/SMBU-PolarBear-Robotics-Team/pb2025_sentry_nav/wiki)
-
-### 2.5 手柄控制
-
-默认情况下，PS4 手柄控制已开启。键位映射关系详见 [nav2_params.yaml](./pb2025_nav_bringup/config/simulation/nav2_params.yaml) 中的 `teleop_twist_joy_node` 部分。
-
-![teleop_twist_joy.gif](https://raw.githubusercontent.com/LihanChen2004/picx-images-hosting/master/teleop_twist_joy.5j4aav3v3p.gif)
+当前 `MecanumDrive2` 在车体上施加平面驱动力，轮子的简化圆柱没有逐个模拟麦轮滚子。
+ICD 轮接触采用 `mu=mu2=0.01` 的低阻力近似，使小速度横移能完成入口居中；这不是用于
+研究真实轮胎附着或打滑的高保真接触模型。碰撞体尺寸、隧道尺寸和所有净空保护保持不变。
+ICD 模型的纵向速度伺服设为增益 `500`、力限幅 `200 N`，与原横向伺服一致，
+减少低摩擦模型在精确停车时的纵向滑行；其他模型仍保留插件原有默认参数。
